@@ -206,5 +206,8 @@ persist.vendor.sensors.odl.adsp=true
 vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
 
+# WiFi
+wifi.aware.interface=wifi-aware0
+
 # Zygote
 zygote.critical_window.minute=10
