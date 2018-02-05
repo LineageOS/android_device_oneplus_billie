@@ -31,7 +31,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    OnePlusN10SettingsProvider
+    OnePlusN10SettingsProvider \
+    OnePlusN10Snap
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
