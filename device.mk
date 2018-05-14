@@ -130,8 +130,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libtinycompress \
     libtinycompress.vendor \
-    libvolumelistener \
-    tinymix
+    libvolumelistener
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
