@@ -184,7 +184,8 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    init.recovery.qcom.rc
 
 # Seccomp
 PRODUCT_COPY_FILES += \
