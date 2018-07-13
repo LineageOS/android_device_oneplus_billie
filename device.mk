@@ -383,6 +383,9 @@ PRODUCT_PACKAGES += \
 
 # OnePlus
 PRODUCT_PACKAGES += \
+    OnePlusDoze
+
+PRODUCT_PACKAGES += \
     oneplus-fwk
 
 PRODUCT_BOOT_JARS += \
