@@ -52,6 +52,14 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.lito.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
