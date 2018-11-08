@@ -61,6 +61,10 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := vendor/billie-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm6350
 
+# Audio
+USE_CUSTOM_AUDIO_POLICY := 1
+USE_XML_AUDIO_POLICY_CONF := 1
+
 # Partitions - Metadata
 BOARD_USES_METADATA_PARTITION := true
 
