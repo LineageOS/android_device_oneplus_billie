@@ -347,6 +347,19 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0:64 \
+    android.hardware.nfc@1.1:64 \
+    android.hardware.nfc@1.2:64 \
+    android.hardware.secure_element@1.0:64 \
+    vendor.nxp.nxpese@1.0:64 \
+    vendor.nxp.nxpnfc@1.0:64
+
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    Tag
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
