@@ -15,10 +15,10 @@
 #
 
 # QCOM vendors
-BOARD_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/qcom/common
-BOARD_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/qcom/sm6350
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/qcom/common
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/qcom/sm6350
 
 # OnePlus
-BOARD_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/oneplus
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/oneplus
 
-BOARD_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/st
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/st
