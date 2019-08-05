@@ -187,9 +187,6 @@ include device/qcom/sepolicy/sepolicy.mk
 # Sepolicy - billie
 include device/oneplus/billie/sepolicy/billie-sepolicy.mk
 
-# Treble
-BOARD_VNDK_VERSION := current
-
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2021-03-05
 
