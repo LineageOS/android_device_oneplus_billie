@@ -547,4 +547,7 @@
     <!-- Telephony qualified networks service package name to bind to by default. -->
     <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
 
+    <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
+    <integer name="config_defaultRefreshRateInZone">90</integer>
+
 </resources>
