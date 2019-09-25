@@ -116,5 +116,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_BOARD_PLATFORM := lito
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno619L
 
+# Treble
+BOARD_VNDK_VERSION := current
+
 # Inherit from the proprietary version
 include vendor/oneplus/billie/BoardConfigVendor.mk
