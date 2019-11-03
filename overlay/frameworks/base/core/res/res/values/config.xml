@@ -536,4 +536,15 @@
          -->
     <string name="config_mainBuiltInDisplayCutout">M -399 69 A 40 40 0 0 1 -479 69 A 40 40 0 0 1 -399 69 Z M -480,0 L -400,0 Z109 M -540,0 L -540,109 Z</string>
 
+    <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
+         empty string is passed in -->
+    <string name="config_wlan_data_service_package">vendor.qti.iwlan</string>
+
+    <!-- IWLAN network service package name to bind to by default. If none is specified in an overlay, an
+         empty string is passed in -->
+    <string name="config_wlan_network_service_package">vendor.qti.iwlan</string>
+
+    <!-- Telephony qualified networks service package name to bind to by default. -->
+    <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
+
 </resources>
