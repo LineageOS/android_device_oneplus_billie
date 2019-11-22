@@ -135,10 +135,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@5.0-impl \
+    android.hardware.audio@6.0-impl \
     android.hardware.audio.common@2.0-util \
-    android.hardware.audio.common@5.0-util \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio.common@6.0-util \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.soundtrigger@2.2-impl
 
 PRODUCT_COPY_FILES += \
