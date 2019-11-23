@@ -166,6 +166,12 @@ persist.vendor.radio.process_sups_ind=1
 persist.vendor.radio.rat_on=combine
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 
+# Radio - IMS
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # RCS
 persist.rcs.otp_sms_port=0
 persist.rcs.supported=1
