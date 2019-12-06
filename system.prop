@@ -35,7 +35,6 @@ ro.charger.enable_suspend = 1
 persist.vendor.cne.feature=1
 
 # Dalvik
-dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 
 # Display (SF)
