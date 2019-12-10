@@ -1,2 +1,5 @@
 # rootfs
 type op1_file, file_type;
+
+# sysfs
+type sysfs_dtb_model, sysfs_type, fs_type;

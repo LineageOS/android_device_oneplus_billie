@@ -15,3 +15,6 @@
 
 # Rootfs files
 /op1(/.*)?                                    u:object_r:op1_file:s0
+
+# Sys files
+/sys/firmware/devicetree/base/model                                    u:object_r:sysfs_dtb_model:s0
