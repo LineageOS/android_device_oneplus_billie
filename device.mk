@@ -134,7 +134,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-service \
+    android.hardware.audio.service \
     android.hardware.audio@5.0-impl \
     android.hardware.audio.common@2.0-util \
     android.hardware.audio.common@5.0-util \
