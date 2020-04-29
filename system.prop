@@ -101,7 +101,6 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-ro.telephony.default_network=33,33
 persist.netmon.linger=5000
 persist.vendor.ims.disableADBLogs=1
 persist.vendor.radio.atfwd.start=true
