@@ -134,6 +134,14 @@ PRODUCT_PACKAGES += \
     tinymix
 
 PRODUCT_PACKAGES += \
+    liba2dpoffload \
+    libhdmiedid \
+    libhfp \
+    libsndmonitor \
+    libspkrprot \
+    libssrec
+
+PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default
