@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+# Enforce native interfaces of product partition as VNDK
+PRODUCT_PRODUCT_VNDK_VERSION := current
+
+# Enforce java interfaces of product partition
+PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
+
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
