@@ -4,3 +4,6 @@ audio.sys.mute.latency.factor=2
 audio.sys.routing.latency=0
 audio.offload.min.duration.secs=30
 audio.sys.offload.pstimeout.secs=3
+
+# Charger
+ro.charger.disable_init_blank=true
