@@ -55,7 +55,7 @@ BOARD_BOOT_HEADER_VERSION := 2
 
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
-    androidboot.console=ttyMSM0 androidboot.memcg=1 \
+    androidboot.memcg=1 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
     service_locator.enable=1 \
