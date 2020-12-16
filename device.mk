@@ -511,6 +511,7 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     libwpa_client \
     wcnss_service \
+    wifi-mac-generator \
     wpa_supplicant \
     wpa_supplicant.conf
 

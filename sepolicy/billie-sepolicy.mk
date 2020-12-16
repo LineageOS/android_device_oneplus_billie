@@ -14,5 +14,8 @@
 # limitations under the License.
 #
 
+# QCOM vendors
+BOARD_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/qcom/common
+
 # OnePlus
 BOARD_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/oneplus
