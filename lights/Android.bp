@@ -18,6 +18,7 @@ cc_binary {
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.billie",
     init_rc: ["android.hardware.light@2.0-service.billie.rc"],
+    vintf_fragments: ["android.hardware.light@2.0-service.billie.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     vendor: true,
     shared_libs: [
