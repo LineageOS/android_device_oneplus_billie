@@ -6,3 +6,4 @@ type op1_file, file_type;
 
 # sysfs
 type sysfs_dtb_model, sysfs_type, fs_type;
+type sysfs_project_info, fs_type, sysfs_type;
