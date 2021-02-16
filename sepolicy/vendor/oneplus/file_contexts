@@ -1,3 +1,6 @@
+# Binaries
+/(vendor|system/vendor)/bin/vl53l1_daemon_main                                    u:object_r:vl53l1_daemon_main_exec:s0
+
 # dev nodes
 /dev/esfp0                                        u:object_r:fingerprintd_device:s0
 /dev/goodix_fp                                    u:object_r:fingerprintd_device:s0

@@ -1,3 +1,6 @@
+# Camera
+type sysfs_vl53l1, fs_type, sysfs_type;
+
 # rootfs
 type op1_file, file_type;
 
