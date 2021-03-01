@@ -1315,8 +1315,6 @@ vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/pwr/PowerFeatureConfig.xml
-vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/etc/powerhint.xml
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
@@ -2174,7 +2172,6 @@ vendor/bin/nn_device_test
 vendor/bin/npu_launcher
 vendor/bin/pktlogconf
 vendor/bin/PktRspTest
-vendor/bin/poweropt-service
 vendor/bin/ppd
 vendor/bin/qdcmss
 vendor/bin/qdss_qmi_helper
@@ -2215,7 +2212,6 @@ vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/ipa_fws.rc
 vendor/etc/init/mutualex.rc
-vendor/etc/init/poweropt-service.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
@@ -2306,8 +2302,6 @@ vendor/lib/libopenvx.so
 vendor/lib/libopus.so
 vendor/lib/libparam_vendor.so
 vendor/lib/libPolarrRender.so
-vendor/lib/libpowercallback.so
-vendor/lib/libpowercore.so
 vendor/lib/libqcbor.so
 vendor/lib/libqwes.so
 vendor/lib/libRbsFlow.so
@@ -2416,7 +2410,6 @@ vendor/lib64/libparam_vendor.so
 vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libPolarrRender.so
 vendor/lib64/libpowercallback.so
-vendor/lib64/libpowercore.so
 vendor/lib64/libprekill.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqwes.so
