@@ -89,6 +89,10 @@ vendor.qcom.bluetooth.soc=cherokee
 ro.camera.notify_nfc=1
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
 
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM6350
+
 # Crypto
 keyguard.no_require_sim=true
 ro.crypto.dm_default_key.options_format.version=2
