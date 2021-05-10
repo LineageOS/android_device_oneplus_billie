@@ -35,6 +35,8 @@ AB_OTA_PARTITIONS += \
     product \
     recovery \
     system \
+    vbmeta \
+    vbmeta_system \
     vendor
 
 AB_OTA_POSTINSTALL_CONFIG += \
