@@ -17,6 +17,10 @@
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/billie/billie-vendor.mk)
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Screen density
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
