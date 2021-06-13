@@ -79,8 +79,6 @@ on post-fs
     mkdir /mnt/vendor/op2/recovery 0770 root system
 
 on late-fs
-    wait_for_prop hwservicemanager.ready true
-    exec_start wait_for_keymaster
     mount_all --late
 
 on post-fs-data
