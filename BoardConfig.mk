@@ -82,6 +82,8 @@ TARGET_COPY_OUT_PRODUCT := product
 # Partitions - Recovery
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
 
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
 # Partitions - Super
 BOARD_SUPER_PARTITION_GROUPS := oneplus_dynamic_partitions
 BOARD_SUPER_PARTITION_SIZE := 15032385536
