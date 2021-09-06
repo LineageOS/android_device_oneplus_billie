@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_kernel_oneplus_sm6350",
+    "target_path": "kernel/oneplus/sm6350"
+  }
+]
