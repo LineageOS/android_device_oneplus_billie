@@ -83,6 +83,11 @@ TARGET_ENABLE_MEDIADRM_64 := true
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
+ODM_MANIFEST_2_FILES := $(DEVICE_PATH)/manifest_2.xml
+ODM_MANIFEST_8_FILES := $(DEVICE_PATH)/manifest_8.xml
+ODM_MANIFEST_10_FILES := $(DEVICE_PATH)/manifest_10.xml
+ODM_MANIFEST_SKUS += 2 8 10
+
 # Partitions - Metadata
 BOARD_USES_METADATA_PARTITION := true
 
