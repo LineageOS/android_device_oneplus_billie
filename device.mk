@@ -494,6 +494,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     thermal.lito
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.billie
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
