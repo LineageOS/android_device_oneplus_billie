@@ -25,7 +25,8 @@ $(call inherit-product, vendor/oneplus/billie/billie-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
