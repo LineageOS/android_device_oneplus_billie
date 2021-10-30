@@ -38,7 +38,6 @@ dev.pm.dyn_samplingrate=1
 
 # Display (SF)
 debug.sf.enable_hwc_vds=1
-debug.sf.latch_unsignaled=1
 
 # Display (GFX)
 ro.gfx.driver.0=com.oneplus.gpudrivers.kona.api30
