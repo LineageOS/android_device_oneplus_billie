@@ -91,6 +91,10 @@ ODM_MANIFEST_8_FILES := $(DEVICE_PATH)/manifest_8.xml
 ODM_MANIFEST_10_FILES := $(DEVICE_PATH)/manifest_10.xml
 ODM_MANIFEST_SKUS += 2 8 10
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_billie
+TARGET_RECOVERY_DEVICE_MODULES := libinit_billie
+
 # Partitions - Metadata
 BOARD_USES_METADATA_PARTITION := true
 
