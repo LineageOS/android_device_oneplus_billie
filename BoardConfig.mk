@@ -116,6 +116,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_BOARD_PLATFORM := lito
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno619L
 
+# Sepolicy - Common
+include device/qcom/sepolicy/sepolicy.mk
+
 # Treble
 BOARD_VNDK_VERSION := current
 
