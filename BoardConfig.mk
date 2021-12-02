@@ -148,6 +148,9 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno619L
 # Sepolicy - Common
 include device/qcom/sepolicy/sepolicy.mk
 
+# Sepolicy - billie
+include device/oneplus/billie/sepolicy/billie-sepolicy.mk
+
 # Treble
 BOARD_VNDK_VERSION := current
 
