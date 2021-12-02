@@ -13,3 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# OnePlus
+BOARD_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/oneplus
