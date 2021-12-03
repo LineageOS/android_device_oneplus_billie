@@ -226,6 +226,9 @@
     <!-- Wifi driver supports batched scan -->
      <bool name="config_wifi_batched_scan_supported">true</bool>
 
+    <!-- Indicates that connected MAC randomization is supported on this device -->
+    <bool  name="config_wifi_connected_mac_randomization_supported">true</bool>
+
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
      <bool name="config_wifi_dual_band_support">true</bool>
 
