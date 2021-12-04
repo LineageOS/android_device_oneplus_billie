@@ -94,6 +94,9 @@ TARGET_MODULE_ALIASES += \
     rx_macro_dlkm.ko:audio_rx_macro.ko \
     tx_macro_dlkm.ko:audio_tx_macro.ko
 
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := billie,OnePlusN10
+
 # Audio
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
