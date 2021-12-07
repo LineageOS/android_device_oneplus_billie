@@ -1,3 +1,5 @@
+allow nfc default_android_hwservice:hwservice_manager { find };
+
 # Allow nfc to get vendor_nfc_prop
 get_prop(nfc, vendor_nfc_prop)
 get_prop(nfc, persist_nfc_prop)
