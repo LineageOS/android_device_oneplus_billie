@@ -1,0 +1,2 @@
+# Block devices
+/dev/block/platform/soc/1d84000\.ufshc/by-name/config                                    u:object_r:frp_block_device:s0
