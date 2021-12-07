@@ -1,0 +1,2 @@
+# Allow kernel to read kmsg_device
+allow kernel kmsg_device:chr_file r_file_perms;
