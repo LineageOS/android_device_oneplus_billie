@@ -1,5 +1,13 @@
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.billie                                    u:object_r:hal_light_default_exec:s0
 
+# HALs - OnePlus
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                                      u:object_r:hal_cameraHIDL_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.display\@1\.0-service                                    u:object_r:hal_display_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.ifaa@2\.0-service                                        u:object_r:hal_ifaa_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.param@1\.0-service                                       u:object_r:hal_param_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.rpmb@1\.0-service                                        u:object_r:hal_rpmb_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.wifi@1\.0-service                                        u:object_r:hal_wifi_default_exec:s0
+
 # Rootfs files
 /op1(/.*)?                                    u:object_r:op1_file:s0
