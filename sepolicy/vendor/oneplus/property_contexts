@@ -1,2 +1,7 @@
 # Fingerprint
 persist.vendor.sys.fp.                                    u:object_r:vendor_fp_prop:s0
+
+# Param
+ro.boot.prmec                                    u:object_r:exported_default_prop:s0
+ro.boot.prmfc                                    u:object_r:boottime_prop:s0
+ro.boot.prmuc                                    u:object_r:boottime_prop:s0
