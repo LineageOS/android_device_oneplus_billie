@@ -43,6 +43,8 @@ void vendor_load_properties()
 
     if (model == "8") {
         prop = "ssss";
+    } else {
+        prop = "dsds";
     }
 
     // Set multisim config
