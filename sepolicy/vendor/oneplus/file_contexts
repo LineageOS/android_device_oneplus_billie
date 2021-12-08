@@ -1,6 +1,7 @@
 # dev nodes
-/dev/param                                        u:object_r:param_device:s0
+/dev/esfp0                                        u:object_r:fingerprintd_device:s0
 /dev/goodix_fp                                    u:object_r:fingerprintd_device:s0
+/dev/param                                        u:object_r:param_device:s0
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.billie                                    u:object_r:hal_light_default_exec:s0
