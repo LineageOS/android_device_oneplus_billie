@@ -1,3 +1,6 @@
+# HALs
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon                                    u:object_r:hal_fingerprint_hwservice:s0
+
 # HALs - OnePlus
 vendor.oneplus.camera.CameraHIDL::IOnePlusCameraProvider                                    u:object_r:hal_cameraHIDL_hwservice:s0
 vendor.oneplus.camera.CameraMDMHIDL::IOnePlusCameraMDM                                      u:object_r:hal_cameraHIDL_hwservice:s0
