@@ -206,7 +206,7 @@ on boot
     chown secure_element secure_element /dev/p73
 
 #  /* add for TP to set node gesture_enable */
-    chown system system /proc/touchpanel/gesture_enable
+    chown system system /proc/touchpanel/double_tap_enable
     chown system system /proc/touchpanel/gesture_switch
     chown system system /proc/touchpanel/game_switch_enable
     chown system system /proc/touchpanel/key_switch

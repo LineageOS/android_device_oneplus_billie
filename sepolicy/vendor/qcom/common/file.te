@@ -1,2 +1,5 @@
 # sysfs
 type sysfs_fsc, sysfs_type, fs_type;
+
+# Proc
+type proc_touchpanel, fs_type, proc_type;
