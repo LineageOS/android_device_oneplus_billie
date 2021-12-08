@@ -1,6 +1,3 @@
-# Block devices
-/dev/block/platform/soc/1d84000\.ufshc/by-name/param                                    u:object_r:param_block_device:s0
-
 # dev nodes
 /dev/param                                        u:object_r:param_device:s0
 /dev/goodix_fp                                    u:object_r:fingerprintd_device:s0
