@@ -1,0 +1,2 @@
+# Allow secure_element to get vendor_nfc_prop
+get_prop(secure_element, vendor_nfc_prop)
