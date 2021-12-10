@@ -498,12 +498,6 @@ service copy_qxdm_log /system/bin/OPDiagdataCopy -q ${vendor.copy.qxdm.log}
     oneshot
     disabled
 
-service oneplus.engineer-1-0 /vendor/bin/hw/vendor.oneplus.engnative.engineer@1.0-service
-    class main
-    user system
-    group system
-    interface vendor.oneplus.engnative.engineer@1.0::IEngineer default
-
 #endif
 
 #ifdef VENDOR_EDIT
