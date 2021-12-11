@@ -1566,7 +1566,7 @@ vendor/bin/qti
 vendor/bin/rmt_storage
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
-vendor/etc/data/netmgr_config.xml
+vendor/etc/data/netmgr_config.xml|34f335319925a767e7ef3d0f698dca3ca20f94a0
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrild.rc
