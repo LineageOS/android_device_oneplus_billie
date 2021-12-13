@@ -32,11 +32,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <property name="audio.deep_buffer.media" value="true"/>
         <property name="audio.offload.disable" value="false"/>
         <property name="audio.offload.min.duration.secs" value="30"/>
-        <!-- #ifdef VENDOR_EDIT -->
-        <!-- rajkamal@Multimedia, 20200430, disable video compressed playback-->
-        <!-- property name="audio.offload.video" value="true"/ -->
-        <property name="audio.offload.video" value="false"/>
-        <!-- #endif -->
+        <property name="audio.offload.video" value="true"/>
         <property name="persist.vendor.audio.sva.conc.enabled" value="false"/>
         <property name="persist.vendor.audio.va_concurrency_enabled" value="false"/>
         <property name="vendor.audio.av.streaming.offload.enable" value="false"/>
