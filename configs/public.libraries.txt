@@ -1,101 +1,67 @@
+libnpu.so
+libhta_hexagon_runtime.so
 libqti-perfd-client.so
 libadsprpc.so
 libcdsprpc.so
 libsdsprpc.so
 libfastcvopt.so
-liblistenjni.so
 liblistensoundmodel2.so
 libOpenCL.so
-libnpu.so
-libhta_hexagon_runtime.so
 unnhal-acc-hta.so
 libarcsoft_hdr_denoise_api.so
 libarcsoft_tricam_verification.so
-libAlgoProcess.so
+libAlgoProcess.so 64
 libPolarrRender.so
-libapsexif.so
-libapsjpeg.so
-libVDBlurlessAPI_v2.so
+libapsexif.so 64
+libapsjpeg.so 64
 libmpbase.so
 libarcsoft_high_dynamic_range.so
 libarcsoft_smart_denoise.so
 libarcsoft_low_light_hdr.so
-libarcsoft_hdr_couple_api.so
-libarcsoft_high_dynamic_range_couple.so
-libPerfectlyClearCrux.so
-libarcsoft_super_night_raw.so
-libarcsoft_hdrplus_hvx_stub.so
-libmegvii_superiq.so
-libmegface.so
-libgnustl_shared.so
-siq_ocl_cache.so
-cache.so
-superiq_model.so
-libVDSuperPhotoAPI.so
-libarcsoft_beautyshot.so
-libBeautyShot_skel.so
-libarcsoft_hdrplus_hvx_skel.so
-libFaceBeautyCap.so
-libstface_fd_api.so
-libVDEyeEnhance.so
-libVDBlurless.so
-libVDHexagonBlurless_skel.so
-libVDHexagonBlurless_v2_skel.so
-libvdblurless.so
-libvdblurless_skel.so
-libVDUpScale.so
-libVDDualCameraBlurlessAPI.so
-merged_model.so
-merged_model_post.so
-libmegface_rt_bokeh.so
-libMegviiHumBokeh.so
-libMegviiHumBokehPost.so
-libapsdarksight.so
-libaps_frame_registration.so
-libhdr_skel.so
-libSNPE.so
-libsymphony-cpu.so
-libsymphonypower.so
-libc++_shared.so
+libarcsoft_hdr_couple_api.so 64
+libarcsoft_high_dynamic_range_couple.so 64
+libarcsoft_super_night_raw.so 64
+libarcsoft_hdrplus_hvx_stub.so 64
+libVDSuperPhotoAPI.so 64
+libarcsoft_beautyshot.so 64
+libVDBlurless.so 64
+libVDDualCameraBlurlessAPI.so 64
+libapsdarksight.so 64
+libaps_frame_registration.so 64
+libSNPE.so 64
+libsymphony-cpu.so 64
+libsymphonypower.so 64
+libc++_shared.so 64
 libstdc++.so
 libarcsoft_dualcam_bokeh_api.so
 libarcsoft_dualcam_refocus_preview.so
 libarcsoft_dualcam_refocus_left.so
-libarcsoft_dualcam_refocus_right.so
 libarcsoft_dualcam_refocus_uw.so
-libarcsoft_dualcam_refocus_skel.so
 libarcsoft_portrait_distortion_correction.so
 libarcsoft_portrait_distortion_correction_20801.so
-libstblur_capture_api.so
-libmorpho_image_refiner_deflicker.so
-lib_oneplus_watermark.so
+libmorpho_image_refiner_deflicker.so 64
+lib_oneplus_watermark.so 64
 vendor.qti.hardware.camera.postproc@1.0.so
-libSuperSensor.so
-libSuperSensorFallback.so
-libSuperSensorProcessor.so
-libSuperSensorProcessorCWrapper.so
-libSuperSensor_skel.so
-libalgo.supertext.so
-libXDocProcessSDK.so
-libdspCV_skel.so
-libfastcvadsp.so
-libarcsoft_stripe_removal.so
-libarcsoft_mfsr_frt.so
-libarcsoft_superportrait.so
-libarcnn_hvx_1_1_skel.so
-libAncSegBaseSdk.so
-libancbase_segbase.so
-libop-bokeh.so
-lib_bokehlib.so
-libhta.so
-libyuv2.so
-libsnpe_dsp_domains.so
-libsnpe_dsp_domains_v2.so
-libcalculator_domains_skel.so
-libcalculator_skel.so
-libsnpe_dsp_domains_skel.so
-libsnpe_dsp_skel.so
-libsnpe_dsp_v65_domains_v2_skel.so
-libsnpe_dsp_v66_domains_v2_skel.so
+libSuperSensor.so 64
+libSuperSensorFallback.so 64
+libSuperSensorProcessor.so 64
+libSuperSensorProcessorCWrapper.so 64
+libarcsoft_stripe_removal.so 64
+libarcsoft_mfsr_frt.so 64
+libarcsoft_superportrait.so 64
+libAncSegBaseSdk.so 64
+libancbase_segbase.so 64
+libop-bokeh.so 64
+lib_bokehlib.so 64
+libhta.so 64
+libyuv2.so 64
+libsnpe_dsp_domains.so 64
+libsnpe_dsp_domains_v2.so 64
 libalCFR.so
-
+libqti-perfd-client.so
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistensoundmodel2.so
+libOpenCL.so
