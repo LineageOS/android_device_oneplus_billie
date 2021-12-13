@@ -1,20 +1,24 @@
-<manifest version="1.0" type="device" target-level="4">
-    <hal format="hidl">
-        <name>android.hardware.radio</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::ISap/slot1</fqname>
-        <fqname>@1.4::IRadio/slot1</fqname>
-    </hal>
-    <hal format="hidl">
+<manifest version="2.0" type="device" target-level="4">
+    <!-- secure element -->
+    <hal format="hidl" override="true">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>ISecureElement</name>
             <instance>SIM1</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <hal format="hidl" override="true">
+        <name>vendor.qti.hardware.data.iwlan</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IIWlan</name>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" override="true">
         <name>vendor.qti.hardware.data.connection</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -23,10 +27,28 @@
             <instance>slot1</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <!-- IRADIO -->
+    <hal format="hidl" override="true">
+        <name>android.hardware.radio</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.2::ISap/slot1</fqname>
+    </hal>
+    <!-- RIL AUDIO HAL -->
+    <hal format="hidl" override="true">
+        <name>vendor.qti.hardware.radio.am</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQcRilAudio</name>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
+    <!-- radio ims -->
+    <hal format="hidl" override="true">
         <name>vendor.qti.hardware.radio.ims</name>
         <transport>hwbinder</transport>
-        <version>1.5</version>
+        <version>1.6</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -41,7 +63,8 @@
             <instance>qcrinvopt0</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <!-- qcrilhook -->
+    <hal format="hidl" override="true">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -50,7 +73,48 @@
             <instance>oemhook0</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <!-- RIL UIM REMOTE CLIENT -->
+    <hal format="hidl" override="true">
+        <name>vendor.qti.hardware.radio.uim_remote_client</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUimRemoteServiceClient</name>
+            <instance>uimRemoteClient0</instance>
+
+        </interface>
+    </hal>
+    <!-- RIL UIM REMOTE SERVER -->
+    <hal format="hidl" override="true">
+        <name>vendor.qti.hardware.radio.uim_remote_server</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUimRemoteServiceServer</name>
+            <instance>uimRemoteServer0</instance>
+        </interface>
+    </hal>
+    <!-- RIL UIM LPA -->
+    <hal format="hidl" override="true">
+        <name>vendor.qti.hardware.radio.lpa</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUimLpa</name>
+            <instance>UimLpa0</instance>
+        </interface>
+    </hal>
+    <!-- RIL UIM -->
+    <hal format="hidl" override="true">
+        <name>vendor.qti.hardware.radio.uim</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>IUim</name>
+            <instance>Uim0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" override="true">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -59,7 +123,8 @@
             <instance>slot1</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <!-- Hidl service for 5G network apis -->
+    <hal format="hidl" override="true">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
         <version>2.4</version>
@@ -69,57 +134,104 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.radio.am</name>
+        <name>android.hardware.drm</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.3::ICryptoFactory/wfdhdcp</fqname>
+        <fqname>@1.3::IDrmFactory/wfdhdcp</fqname>
+    </hal>
+    <hal format="hidl" override="true">
+        <name>android.hardware.keymaster</name>
+        <transport>hwbinder</transport>
+        <version>4.0</version>
+        <interface>
+            <name>IKeymasterDevice</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@4.0::IKeymasterDevice/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>com.dsi.ant</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IQcRilAudio</name>
-            <instance>slot1</instance>
+            <name>IAnt</name>
+            <instance>default</instance>
         </interface>
+        <fqname>@1.0::IAnt/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.radio.uim_remote_client</name>
+        <name>com.qualcomm.qti.dpm.api</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IUimRemoteServiceClient</name>
-            <instance>uimRemoteClient0</instance>
+            <name>IdpmQmi</name>
+            <instance>dpmQmiService</instance>
         </interface>
+        <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.radio.uim_remote_server</name>
+        <name>vendor.qti.hardware.bluetooth_audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IBluetoothAudioProvidersFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.btconfigstore</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IBTConfigStore</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IBTConfigStore/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.data.latency</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IUimRemoteServiceServer</name>
-            <instance>uimRemoteServer0</instance>
+            <name>ILinkLatency</name>
+            <instance>default</instance>
         </interface>
+        <fqname>@1.0::ILinkLatency/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.radio.lpa</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IUimLpa</name>
-            <instance>UimLpa0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.uim</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IUim</name>
-            <instance>Uim0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.data.iwlan</name>
+        <name>vendor.qti.hardware.fm</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IIWlan</name>
-            <instance>slot1</instance>
+            <name>IFmHci</name>
+            <instance>default</instance>
         </interface>
-   </hal>
+        <fqname>@1.0::IFmHci/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.wifidisplaysession</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IWifiDisplaySession</name>
+            <instance>wifidisplaysession</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionAudioTrack</name>
+            <instance>wifidisplaysessionaudiotrack</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionImageTrack</name>
+            <instance>wifidisplaysessionimagetrack</instance>
+        </interface>
+        <interface>
+            <name>IWifiDisplaySessionVideoTrack</name>
+            <instance>wifidisplaysessionvideotrack</instance>
+        </interface>
+        <fqname>@1.0::IWifiDisplaySession/wifidisplaysession</fqname>
+        <fqname>@1.0::IWifiDisplaySessionAudioTrack/wifidisplaysessionaudiotrack</fqname>
+        <fqname>@1.0::IWifiDisplaySessionImageTrack/wifidisplaysessionimagetrack</fqname>
+        <fqname>@1.0::IWifiDisplaySessionVideoTrack/wifidisplaysessionvideotrack</fqname>
+    </hal>
 </manifest>
