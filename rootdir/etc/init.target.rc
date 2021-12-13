@@ -26,11 +26,11 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
+# kevin@system, 2020/09/03, add carrier rc
 import /vendor/etc/init/hw/init.oem.carrier.rc
 
 on early-init
     write /proc/sys/kernel/sched_boost 1
-
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1
@@ -50,37 +50,34 @@ on early-fs
 
 on fs
     start hwservicemanager
-#ifdef VENDOR_EDIT
+    #RuiLi@ODM_WT.ENGINEERINGMODE, 2021/01/27 *#911# can't creat file in op2
+    mkdir /mnt/vendor/op2 0660 system system
+    mount_all --early
 # ajinath@SYSTEM, 2020/01/16, [OSP-2080] Recovery boot reason
-    mount ext4 /dev/block/bootdevice/by-name/op2 /op2 noatime nosuid nodev barrier=1
-    wait /op2
-    chown system system /op2
-    mkdir /op2/rbr_log 0770 system system
-    setprop vendor.oem.rbr.log.clean 1
+    wait /mnt/vendor/op2
+    chown system system /mnt/vendor/op2
+    mkdir /mnt/vendor/op2/rbr_log 0770 system system
 #endif /* VENDOR_EDIT */
-    mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
-    #ifdef ODM_WT_EDIT
-    #bug552443 xiaojianhua.wt, add, 2020.05.12,add led calibration feature for factory mode
-    mkdir /mnt/vendor/persist/camera  0777 system system
-    chmod 0777 /mnt/vendor/persist/camera/flash_result
-    chmod 0777 /mnt/vendor/persist/camera/calib_result
-    chmod 0777 /mnt/vendor/persist/camera/dualcam_cal_data
-    chmod 0777 /mnt/vendor/persist/camera/verify_result
-    #endif
+    #RuiLi@ODM_WT.ENGINEERINGMODE, 2021/01/27 *#911# can't creat file in op2
+    wait /mnt/vendor/op2
+    chown system system /mnt/vendor/op2
+    #sam.li@SYSTEM,add for cota
+    mkdir /mnt/vendor/my_cota 0660 system system
 
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
-    mkdir /op2/recovery 0770 root system
+# yanbin.zhang@ODM_WT.AD.Aging 2020/12/21, add for engineeringmode app.
+    mkdir /mnt/vendor/op2/recovery 0770 root system
 
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
-    mount_all /vendor/etc/fstab.qcom --late
+    mount_all --late
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
@@ -109,55 +106,11 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss_mdm"
     setprop vendor.usb.controller a600000.dwc3
-
-#display add 2020/02/03  @vikas.kala_display
-    chmod 0666 /sys/class/drm/card0-DSI-1/SRGB
-    chmod 0666 /sys/class/drm/card0-DSI-1/DCI_P3
-    chmod 0666 /sys/class/drm/card0-DSI-1/hbm
-    chmod 0666 /sys/class/drm/card0-DSI-1/cabc
-    chmod 0666 /sys/class/drm/card0-DSI-1/aod
-    chmod 0666 /sys/class/drm/card0-DSI-1/night_mode
-    chmod 0666 /sys/class/drm/card0-DSI-1/panel_serial_number
-    chmod 0666 /sys/class/drm/card0-DSI-1/oneplus_mode
-    chmod 0666 /sys/class/drm/card0-DSI-1/adaption_mode
-    chmod 0666 /sys/class/drm/card0-DSI-1/notify_fppress
-    chmod 0666 /sys/class/drm/card0-DSI-1/dim_alpha
-    chmod 0666 /sys/class/drm/card0-DSI-1/notify_dim
-    chmod 0666 /sys/class/drm/card0-DSI-1/force_screenfp
-    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_p3_mode
-    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_wide_color_mode
-    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_srgb_color_mode
-# ashu.sharma@Multimedia, Change Ownership of the node
-    chown system system /sys/class/drm/card0-DSI-1/hbm_brightness
-    chmod 0644 /sys/class/drm/card0-DSI-1/hbm_brightness
-    chmod 0666 /sys/class/drm/card0-DSI-1/dsi_seed_command
-    chmod 0666 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
-    chown radio radio /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
-    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_loading_effect_mode
-    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_customer_srgb_mode
-    chmod 0666 /sys/class/drm/card0-DSI-1/native_display_customer_p3_mode
-    chmod 0666 /sys/class/drm/card0-DSI-1/dimlayer_bl_en
-    chmod 0666 /sys/class/drm/card0-DSI-1/seed_lp
-#mohammed.ahmed@Multimedia, 2020/03/28, add for dump audio related codec
-    chmod 0644 /d/regmap/2-0034/registers
-    chmod 0644 /d/regmap/2-0042/registers
-#mohammed.ahmed@Multimedia, 2020/04/25, assign 644 permission to enable codec register access via oemlogkit
-    chmod 644 /d/regmap/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/registers
-    chmod 644 /d/regmap/wcd938x-slave.d01170223-wcd938x_csr/registers
-    restorecon /sys/kernel/debug/regmap/2-0034/registers
-    restorecon /sys/kernel/debug/regmap/2-0042/registers
-    restorecon /sys/kernel/debug/regmap//wcd938x-slave.d01170223-wcd938x_csr/registers
-    restorecon /sys/kernel/debug/regmap/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/registers
-    #ifdef ODM_WT_EDIT
-    #bug552443 xiaojianhua.wt, add, 2020.05.12,add led calibration feature for factory mode
-    chown root system /sys/class/leds/led:torch_0/brightness
-    chown root system /sys/class/leds/led:switch_2/brightness
-    chmod 0660 /sys/class/leds/led:torch_0/brightness
-    chmod 0660 /sys/class/leds/led:switch_2/brightness
-    #endif
+#Load WLAN driver
+#Fanghua.Zhu@ODM_WT.BSP.CONN.WIFI.107968, 2020/12/26, Remove for AT OPEN_WIFI fail in FTM mode.
+#    insmod /vendor/lib/modules/qca_cld3_wlan.ko
     #BILLIE8-2329,taoli.wt,20200709, add for Camera-Camera performance optimization 1st round
     chmod 0666 /dev/cpuset/background/cpus
-
     # ifdef VENDOR_EDIT
     # simon.ma@OPTI, 2020/6/20, [AVICII-6766] Optimize surfaceflinger
     write /dev/cpuset/display/cpus 6-7
@@ -168,19 +121,6 @@ on property:vendor.display.lcd_density=560
 
 on property:vendor.display.lcd_density=640
    setprop dalvik.vm.heapgrowthlimit 512m
-
-#narasimha.raju@system,2020/05/01,to fix dalvik heapgrowthlimit  on 20801
-# on property:vendor.display.lcd_density=480
-#   setprop dalvik.vm.heapgrowthlimit 128m
-
-on property:vendor.display.lcd_density=240
-   setprop dalvik.vm.heapgrowthlimit 96m
-
-on property:vendor.display.lcd_density=160
-   setprop dalvik.vm.heapgrowthlimit 96m
-
-# v-takey.zheng@SYSTEM, 2020/06/03 Add for oemlogkit camera log
-    chmod 0666 /sys/module/cam_debug_util/parameters/debug_mdl
 
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
@@ -227,12 +167,6 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
-#ashu.sharma@MM.Display, Add ltm license
-on property:sys.boot_completed=1
-    copy /vendor/etc/OnePlus_QC_LTM_Commercial_SM7250_2020_04_26.pfm /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-220910215.pfm
-    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-220910215.pfm
-    chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-220910215.pfm
-
 on property:vold.decrypt=trigger_restart_framework
    start vendor.cnss_diag
 
@@ -240,17 +174,20 @@ service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    class main
    user system
    group system wifi inet sdcard_rw media_rw diag
-# Deepak.sehjpal@Connectivity, 2020/03/31, add for wlan logs function
-   disabled
    oneshot
 
-#ifdef VENDOR_EDIT
-# ajinath@SYSTEM, 2020/01/16, [OSP-2080] Recovery boot reason
-on property:vendor.oem.rbr.log.clean=1
-   rm /op2/rbr_log/.last_init_boot_failed.log.busy
-   rm /op2/rbr_log/.last_init_boot_failed.log.done
-   rm /op2/rbr_log/last_init_boot_failed.log
-   rm /op2/rbr_log/last_init_boot_failed.1.log
-   rm /op2/rbr_log/last_system_boot_failed.log
-   setprop vendor.oem.rbr.log.clean 0
-#endif /* VENDOR_EDIT */
+service dcvs-sh /vendor/bin/init.qti.dcvs.sh
+    class late_start
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:vendor.dcvs.prop=1
+   start dcvs-sh
+#Asa.Manish@MM.Display. Add LTM Licence
+on property:sys.boot_completed=1
+    copy /vendor/etc/OnePlus_QC_LTM_Commercial_SM7225_2021_03_24.pfm /mnt/vendor/persist/data/pfm/licenses/OnePlus_QC_LTM_Commercial_SM7225_2021_03_24.pfm.inst
+    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/OnePlus_QC_LTM_Commercial_SM7225_2021_03_24.pfm.inst
+    chown system system /mnt/vendor/persist/data/pfm/licenses/OnePlus_QC_LTM_Commercial_SM7225_2021_03_24.pfm.inst
+

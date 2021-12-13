@@ -426,34 +426,30 @@ PRODUCT_PACKAGES += \
     dump_sniffer.sh \
     ftm_power_config.sh \
     init.class_main.sh \
-    init.crda.sh \
-    init.mdm.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.crashdata.sh \
+    init.qti.dcvs.sh \
     init.qcom.early_boot.sh \
     init.qcom.efs.sync.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
     init.qti.chg_policy.sh \
-    init.qti.fm.sh \
-    init.qti.ims.sh \
     launch_sniffer.sh \
     qca6234-service.sh \
+    startcontention.sh \
     terminate_sniffer.sh
 
 PRODUCT_PACKAGES += \
-    init.msm.usb.configfs.rc \
     init.oem.debug.rc \
     init.oem.rc \
-    init.qcom.factory.rc \
+    init.oem_ftm.rc \
+    init.oem_rf.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.uicc.rc \
+    init.usb.configfs.rc \
     vendor.oem_ftm.rc \
     vendor.oem_ftm_svc_disable.rc \
     ueventd.qcom.rc

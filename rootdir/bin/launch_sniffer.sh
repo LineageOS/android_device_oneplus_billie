@@ -1,32 +1,26 @@
 #!/vendor/bin/sh
 # launch_sniffer.sh
 
-iface=$(getprop vendor.wlan.sniffer.iface)
-channel=$(getprop vendor.wlan.sniffer.channel)
-bandwidth=$(getprop vendor.wlan.sniffer.bandwidth)
-vendor_dir=$(getprop vendor.wlan.sniffer.vendor_dir)
-file=$(getprop vendor.wlan.sniffer.file)
-setprop vendor.wlan.sniffer.pid 0
-
-mkdir -p $vendor_dir
-if [ ! $(echo $vendor_dir | grep "/$") ]
-then
-    vendor_dir=$vendor_dir/
-fi
-vendor_path=$vendor_dir$file
+iface=$1
+channel=$2
+bandwidth=$3
 
 if [[ $(lsmod | grep "^wlan") == "" ]]
 then
-    insmod /vendor/lib/modules/qca_cld3_wlan.ko
+    insmod /vendor/lib/modules/qca_cld3_qca6390.ko
+    if [[ $? != 0 ]]
+    then
+        insmod /vendor/lib/modules/qca_cld3_wlan.ko
+    fi
     sleep 1
 fi
 
-ifconfig $iface down
-sleep 3
-echo 4 > /sys/module/wlan/parameters/con_mode
-ifconfig $iface up
+ifconfig $iface down && echo 4 > /sys/module/wlan/parameters/con_mode && ifconfig $iface up
 
 case $bandwidth in
+"160")
+    bandwidth=3
+    ;;
 "80")
     bandwidth=2
     ;;
@@ -40,7 +34,14 @@ case $bandwidth in
     bandwidth=0
     ;;
 esac
-iwpriv $iface setMonChan $channel $bandwidth
 
-tcpdump -i $iface -w $vendor_path &
-setprop vendor.wlan.sniffer.pid $!
+for i in `seq 1 10`
+do
+    if [[ $(ifconfig | grep "^wlan0") == "" ]]
+    then
+        sleep 1
+    else
+        iwpriv $iface setMonChan $channel $bandwidth
+        break
+    fi
+done
