@@ -84,6 +84,9 @@
     </config_params>
     <acdb_ids>
         <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
+        <!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+        <device name="SND_DEVICE_OUT_DUMMY" acdb_id="15"/>
+        <!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
         <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="124"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="14"/>
@@ -106,6 +109,14 @@
         <device name="SND_DEVICE_IN_UNPROCESSED_QUAD_MIC" acdb_id="146"/>
         <device name="SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC" acdb_id="147"/>
         <device name="SND_DEVICE_IN_HANDSET_GENERIC_QMIC" acdb_id="191"/>
+        <device name="SND_DEVICE_OUT_BT_A2DP" acdb_id="10"/>
+        <!-- mian.zhang@MM, 2021/03/23, Add for copy acdb_id from Q to R -->
+        <device name="SND_DEVICE_IN_HEADSET_MIC" acdb_id="23"/>
+        <device name="SND_DEVICE_OUT_USB_HEADSET" acdb_id="10"/>
+        <device name="SND_DEVICE_OUT_USB_HEADPHONES" acdb_id="10"/>
+        <device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" acdb_id="10"/>
+        <!-- rich.yu@MM.Audio, 2021/04/27, use voice speaker for mobile game -->
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_GAME" acdb_id="180"/>
     </acdb_ids>
     <backend_names>
         <device name="SND_DEVICE_OUT_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
@@ -125,7 +136,10 @@
         <device name="SND_DEVICE_OUT_VOICE_ANC_HEADSET" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_LINE" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADSET" backend="headset" interface="RX_CDC_DMA_RX_0"/>
-        <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
+        <!-- chenshuyun@MM, 2021/05/14, fix tty issue start -->
+        <!-- <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/> -->
+        <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" backend="headset" interface="RX_CDC_DMA_RX_0"/>
+        <!-- chenshuyun@MM, 2021/05/14, fix tty issue start -->
         <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <!--add for audio test start-->
         <device name="SND_DEVICE_OUT_SPEAKERLEFT_ATA" interface="TERT_MI2S_RX"/>
@@ -134,7 +148,9 @@
         <device name="SND_DEVICE_OUT_SPEAKERRIGHT" interface="TERT_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_MMI" interface="TERT_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_RECEIVER_ATA" backend="handset" interface="TERT_MI2S_RX"/>
+        <!--rich.yu@MM.Audio, 2021/03/25, porting OP_FEATURE_MM_HAC for N10_R-->
         <device name="SND_DEVICE_OUT_HANDSET_HAC" backend="handset" interface="TERT_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_HANDSET_HAC_VOIP" backend="handset" interface="TERT_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_HEADPHONES_MMI" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_ECHO_APP_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <!--add for audio test end-->
@@ -158,7 +174,10 @@
         <device name="SND_DEVICE_OUT_SPEAKER_AND_HDMI" interface="TERT_MI2S_RX-and-HDMI"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_DISPLAY_PORT" interface="TERT_MI2S_RX-and-DISPLAY_PORT"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_A2DP" interface="TERT_MI2S_RX-and-SLIMBUS_7_RX"/>
-        <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" interface="TERT_MI2S_RX"/>
+	<!-- chenshuyun@MM, 2021/05/14, fix tty issue start -->
+	<!-- <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" interface="TERT_MI2S_RX"/> -->
+        <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" backend="hco-handset" interface="TERT_MI2S_RX"/>
+	<!-- chenshuyun@MM, 2021/05/14, fix tty issue end -->
         <device name="SND_DEVICE_OUT_ANC_FB_HEADSET" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_ANC_FB_HEADSET" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_ANC_HANDSET" interface="TERT_MI2S_RX"/>
@@ -218,9 +237,13 @@
         <device name="SND_DEVICE_IN_VOICE_DMIC" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_QMIC" interface="TX_CDC_DMA_TX_3"/>
-        <device name="SND_DEVICE_IN_VOICE_TTY_FULL_HEADSET_MIC" interface="TX_CDC_DMA_TX_3"/>
+        <!-- chenshuyun@MM, 2021/05/14, fix tty issue start -->
+        <!-- <device name="SND_DEVICE_IN_VOICE_TTY_FULL_HEADSET_MIC" interface="TX_CDC_DMA_TX_3"/> -->
+        <!-- chenshuyun@MM, 2021/05/14, fix tty issue end -->
         <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" interface="TX_CDC_DMA_TX_3"/>
-        <device name="SND_DEVICE_IN_VOICE_TTY_HCO_HEADSET_MIC" interface="TX_CDC_DMA_TX_3"/>
+	<!-- chenshuyun@MM, 2021/05/14, fix tty issue start -->
+        <!-- <device name="SND_DEVICE_IN_VOICE_TTY_HCO_HEADSET_MIC" interface="TX_CDC_DMA_TX_3"/> -->
+	<!-- chenshuyun@MM, 2021/05/14, fix tty issue end -->
         <device name="SND_DEVICE_IN_VOICE_REC_MIC" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_VOICE_REC_MIC_NS" interface="TX_CDC_DMA_TX_3"/>
         <device name="SND_DEVICE_IN_VOICE_REC_DMIC_STEREO" interface="TX_CDC_DMA_TX_3"/>
@@ -270,6 +293,11 @@
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_AND_VOICE_ANC_HEADSET" backend="speaker-and-headphones" interface="TERT_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="TERT_MI2S_RX-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="TERT_MI2S_RX-and-SLIMBUS_7_RX"/>
+        <!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+        <device name="SND_DEVICE_OUT_DUMMY" backend="dummy" interface="AFE_PCM_RX"/>
+        <!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+        <!-- rich.yu@MM.Audio, 2021/04/27, use voice speaker for mobile game -->
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_GAME" interface="TERT_MI2S_RX"/>
     </backend_names>
     <!-- below values are for ref purpose to OEM, doesn't contain actual hardware info on MTP -->
     <microphone_characteristics>

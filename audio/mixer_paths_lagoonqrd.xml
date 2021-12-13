@@ -166,6 +166,7 @@
     <ctl name="RX_CDC_DMA_RX_0 Format" value="UNPACKED" />
     <ctl name="TX_CDC_DMA_TX_3 Format" value="UNPACKED" />
     <ctl name="WSA_CDC_DMA_TX_0 SampleRate" value="KHZ_48" />
+    <ctl name="TERT_MI2S_TX Channels" value="Two" />
     <!-- HFP start -->
     <ctl name="HFP_SLIM7_UL_HL Switch" value="0" />
     <ctl name="TERT_MI2S_RX Port Mixer SLIM_7_TX" value="0" />
@@ -520,6 +521,15 @@
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="deep-buffer-playback dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia1" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+    <path name="deep-buffer-playback tert_i2s">
+        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia1" value="1" />
+    </path>
+
     <path name="deep-buffer-playback handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
@@ -646,6 +656,21 @@
     </path>
 
     <path name="low-latency-playback">
+        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+    </path>
+
+<!-- chenshuyun@MM, 2021/05/14, fix tty issue start -->
+    <path name="low-latency-playback hco-handset">
+        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+    </path>
+<!-- chenshuyun@MM, 2021/05/14, fix tty issue end -->
+
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="low-latency-playback dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia5" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+    <path name="low-latency-playback tert_i2s">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
@@ -908,6 +933,12 @@
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia4" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+
     <path name="compress-offload-playback handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
@@ -1049,6 +1080,15 @@
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia7" value="1" />
     </path>
 
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback2 dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia7" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+    <path name="compress-offload-playback2 tert_i2s">
+        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia7" value="1" />
+    </path>
+
     <path name="compress-offload-playback2 handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia7" value="1" />
     </path>
@@ -1165,6 +1205,12 @@
     <path name="compress-offload-playback3">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia10" value="1" />
     </path>
+
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback3 dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia10" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
 
     <path name="compress-offload-playback3 handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia10" value="1" />
@@ -1283,6 +1329,12 @@
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
 
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback4 dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia11" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+
     <path name="compress-offload-playback4 handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
@@ -1400,6 +1452,12 @@
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia12" value="1" />
     </path>
 
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback5 dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia12" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+
     <path name="compress-offload-playback5 handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia12" value="1" />
     </path>
@@ -1516,6 +1574,12 @@
     <path name="compress-offload-playback6">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia13" value="1" />
     </path>
+
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback6 dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia13" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
 
     <path name="compress-offload-playback6 handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia13" value="1" />
@@ -1635,6 +1699,12 @@
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia14" value="1" />
     </path>
 
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback7 dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia14" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+
     <path name="compress-offload-playback7 handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia14" value="1" />
     </path>
@@ -1752,6 +1822,12 @@
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia15" value="1" />
     </path>
 
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback8 dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia15" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
+
     <path name="compress-offload-playback8 handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia15" value="1" />
     </path>
@@ -1868,6 +1944,12 @@
     <path name="compress-offload-playback9">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
+
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="compress-offload-playback9 dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia16" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
 
     <path name="compress-offload-playback9 handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
@@ -2349,6 +2431,18 @@
         <ctl name="VoiceMMode1_Tx Mixer TX_CDC_DMA_TX_3_MMode1" value="1" />
     </path>
 
+<!-- chenshuyun@MM, 2021/05/14, fix tty issue start -->
+    <path name="voicemmode1-call hco-handset">
+         <ctl name="TERT_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
+         <ctl name="VoiceMMode1_Tx Mixer TX_CDC_DMA_TX_4_MMode1" value="1" />
+     </path>
+
+    <path name="voicemmode1-call hco-handset-and-usb-headset-mic">
+        <ctl name="TERT_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
+        <ctl name="VoiceMMode1_Tx Mixer USB_AUDIO_TX_MMode1" value="1" />
+    </path>
+<!-- chenshuyun@MM, 2021/05/14, fix tty issue end -->
+
     <path name="voicemmode1-call handset">
         <ctl name="TERT_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer TX_CDC_DMA_TX_3_MMode1" value="1" />
@@ -2484,6 +2578,12 @@
     <path name="audio-playback-voip">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia10" value="1" />
     </path>
+
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="audio-playback-voip dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia10" value="1" />
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
 
     <path name="audio-playback-voip handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia10" value="1" />
@@ -2758,6 +2858,13 @@
     <path name="mmap-playback">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
+
+<!-- #ifdef VENDOR_EDIT -->
+<!-- zhangrun@MultiMediaService,2016/10/01,add i2s path-->
+    <path name="mmap-playback dummy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia16" value="1" />
+    </path>
+<!-- #endif -->
 
     <path name="mmap-playback handset">
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia16" value="1" />
@@ -3142,6 +3249,12 @@
     <path name="speaker-safe">
         <path name="speaker-mono" />
     </path>
+
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev START -->
+    <path name="dummy">
+        <!-- For mute PA playback device, EMPTY PATH -->
+    </path>
+<!-- heilay.he@MM.AudioDriver.HAL, 2020/01/08, Add for dummy dev END -->
 
    <path name="sidetone-iir">
         <ctl name="IIR0 Enable Band1" value="1" />
@@ -3668,9 +3781,12 @@
         <path name="dmic-endfire" />
     </path>
 
+    <!-- rich.yu@MM.Audio, 2021/04/21, add for headphone tx device during voice call -->
     <path name="voice-speaker-dmic-ef">
+        <!--
         <ctl name="EC Reference Channels" value="Two"/>
         <ctl name="VOC_EXT_EC MUX" value="TERT_MI2S_RX" />
+        -->
         <path name="speaker-dmic-endfire" />
     </path>
 
@@ -3721,9 +3837,22 @@
         <path name="tty-headphones" />
     </path>
 
+<!-- chenshuyun@MM, 2021/05/14, fix tty issue start -->
+    <path name="voice-tty-hco-handset">
+        <ctl name="TTY Mode" value="HCO" />
+        <path name="handset" />
+    </path>
+
+    <path name="voice-tty-hco-handset-hdk">
+        <ctl name="TTY Mode" value="HCO" />
+        <path name="handset" />
+    </path>
+<!-- chenshuyun@MM, 2021/05/14, fix tty issue end -->
+
     <path name="voice-tty-full-headset-mic">
         <path name="amic2" />
         <ctl name="ADC2 Volume" value="0" />
+        <ctl name="TX_DEC0 Volume" value="84" />
     </path>
 
     <path name="voice-tty-hco-headset-mic">
@@ -3843,6 +3972,26 @@
         <ctl name="TERT_MI2S_RX Format" value="S24_LE" />
         <ctl name="TFA_CHIP_SELECTOR" value="2" />
         <ctl name="TFA Profile" value="mmitest" />
+    </path>
+    <!-- Added for ENG mode and MMI -->
+    <path name="eng-mode-speaker-left">
+        <path name="handset" />
+    </path>
+
+    <path name="eng-mode-speaker-right">
+        <path name="speaker" />
+    </path>
+
+    <path name="mmi-handset">
+        <path name="handset" />
+    </path>
+
+    <path name="mmi-speaker-left">
+        <path name="handset" />
+    </path>
+
+    <path name="mmi-speaker-right">
+        <path name="speaker" />
     </path>
 
 </mixer>
