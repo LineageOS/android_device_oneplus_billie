@@ -3,6 +3,7 @@ vendor.egistec.hardware.fingerprint::IBiometricsFingerprintRbs                  
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon                                    u:object_r:hal_fingerprint_hwservice:s0
 
 # HALs - OnePlus
+vendor.oneplus.hardware.camera::IOnePlusCameraProvider                                      u:object_r:hal_cameraHIDL_hwservice:s0
 vendor.oneplus.camera.CameraHIDL::IOnePlusCameraProvider                                    u:object_r:hal_cameraHIDL_hwservice:s0
 vendor.oneplus.camera.CameraMDMHIDL::IOnePlusCameraMDM                                      u:object_r:hal_cameraHIDL_hwservice:s0
 vendor.oneplus.hardware.display::IOneplusDisplay                                            u:object_r:hal_display_hwservice:s0
