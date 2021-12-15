@@ -62,39 +62,6 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := vendor/billie-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm6350
 
-# Kernel modules - Audio
-TARGET_MODULE_ALIASES += \
-    tfa98xx_dlkm.ko:audio_tfa98xx.ko \
-    snd_event_dlkm.ko:audio_snd_event.ko \
-    bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
-    wcd937x_slave_dlkm.ko:audio_wcd937x_slave.ko \
-    wcd938x_slave_dlkm.ko:audio_wcd938x_slave.ko \
-    q6_pdr_dlkm.ko:audio_q6_pdr.ko \
-    hdmi_dlkm.ko:audio_hdmi.ko \
-    q6_notifier_dlkm.ko:audio_q6_notifier.ko \
-    va_macro_dlkm.ko:audio_va_macro.ko \
-    swr_ctrl_dlkm.ko:audio_swr_ctrl.ko \
-    adsp_loader_dlkm.ko:audio_adsp_loader.ko \
-    swr_dlkm.ko:audio_swr.ko \
-    wcd_core_dlkm.ko:audio_wcd_core.ko \
-    wsa883x_dlkm.ko:audio_wsa883x.ko \
-    pinctrl_lpi_dlkm.ko:audio_pinctrl_lpi.ko \
-    wsa881x_dlkm.ko:audio_wsa881x.ko \
-    wsa_macro_dlkm.ko:audio_wsa_macro.ko \
-    platform_dlkm.ko:audio_platform.ko \
-    usf_dlkm.ko:audio_usf.ko \
-    stub_dlkm.ko:audio_stub.ko \
-    wcd9xxx_dlkm.ko:audio_wcd9xxx.ko \
-    wcd937x_dlkm.ko:audio_wcd937x.ko \
-    q6_dlkm.ko:audio_q6.ko \
-    mbhc_dlkm.ko:audio_mbhc.ko \
-    wcd938x_dlkm.ko:audio_wcd938x.ko \
-    machine_dlkm.ko:audio_machine_lito.ko \
-    native_dlkm.ko:audio_native.ko \
-    apr_dlkm.ko:audio_apr.ko \
-    rx_macro_dlkm.ko:audio_rx_macro.ko \
-    tx_macro_dlkm.ko:audio_tx_macro.ko
-
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := billie,OnePlusN10
 
