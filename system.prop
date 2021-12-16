@@ -2,161 +2,51 @@
 # system.prop for billie
 #
 
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
-#rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
-# Set network mode to (NR/T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
-ro.telephony.default_network=33,22
+# Audio
+qcom.hw.aac.encoder=true
+ro.audio.monitorRotation=true
+tunnel.audio.encode = true
+use.voice.path.for.pcm.voip=true
 
+# Bluetooth
+ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.aac_frm_ctl.enabled=true
+persist.vendor.btstack.enable.lpa=true
+persist.vendor.btstack.enable.twsplus=false
+persist.vendor.bt.a2dp.hal.implementation=true
+
+# Bringup properties
+persist.sys.force_sw_gles=1
+ro.kernel.qemu.gles=0
+qemu.hw.mainkeys=0
+
+# Camera
+persist.camera.assert.panic=true
+persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
+persist.camera.privapp.list=com.oneplus,com.oem.autotest,com.oplus.camera
+ro.opcamera.support=true
+vendor.camera.aux.packagelist=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
+
+# Charger
+persist.sys.chgdisabled=0
+ro.charger.enable_suspend = 1
+
+# CNE
+persist.vendor.cne.feature=1
+
+# Dalvik
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 
-#ro.hdmi.enable=true
-#persist.speaker.prot.enable=false
-qcom.hw.aac.encoder=true
-#
-# system props for the cne module
-#
-persist.vendor.cne.feature=1
-
-#system props for the MM modules
-media.stagefright.enable-player=true
-media.stagefright.enable-http=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-scan=true
-media.stagefright.thumbnail.prefer_hw_codecs=true
-mmp.enable.3g2=true
-media.aac_51_output_enabled=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-#13631487 is decimal sum of supported codecs in AAL
-#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD MOV
-#ifdef VENDOR_EDIT
-#vendor.mm.enable.qcom_parser=63963135
-#kushal.modi@multimedia, 2020/03/24, [ITN-27592]remove qcom FLAC-8bit , PARSER_FLAC[0x00020000]
-#vendor.mm.enable.qcom_parser=63832063
-#kushal.modi@multimedia, 2020/04/21, remove qcom XVID parser as it is no more supported, PARSER_XVID[0x02000000]
-vendor.mm.enable.qcom_parser=30277631
-#endif
-
-#ifdef VENDOR_EDIT
-#kushal.modi@multimedia, 2020/05/05, config prop for remove log
-vendor.swvdec.log.level=1
-vendor.vidc.debug.level=1
-#endif
-
-persist.mm.enable.prefetch=true
-
-#Netflix custom property
-ro.netflix.bsp_rev=Q7250-19133-1
-
-#
-# system props for the data modules
-#
-ro.vendor.use_data_netmgrd=true
-persist.data.netmgrd.qos.enable=true
-persist.vendor.data.mode=concurrent
-
-#system props for time-services
-persist.timed.enable=true
-
-# system property for maximum number of HFP client connections
-bt.max.hfpclient.connections=1
-
-#
-# System props for telephony
-# System prop to turn on CdmaLTEPhone always
-telephony.lteOnCdmaDevice=1
-
-#Simulate sdcard on /data/media
-#
-persist.fuse_sdcard=true
-
-#system prop for Bluetooth SOC type
-vendor.bluetooth.soc=cherokee
-ro.bluetooth.library_name=libbluetooth_qti.so
-persist.vendor.btstack.enable.splita2dp=true
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
-persist.vendor.btstack.enable.twsplus=true
-
-#system prop for wipower support
-ro.bluetooth.emb_wp_mode=false
-ro.bluetooth.wipower=false
-
-#ifdef VENDOR_EDIT
-#Clark.lei@Connectivity, 2020/01/17, [ITN-8395] more power consume when A2DP work
-persist.vendor.btstack.enable.lpa=true
-#endif
-
-#
-#snapdragon value add features
-#
-ro.qc.sdk.audio.ssr=false
-
-##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=none
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-
-#ifdef VENDOR_EDIT
-#mohammed.ahmed@MultiMedia, 2020/04/10, add for support wechat voice and video msg
-nxpWechatDebugEnable=1
-#endif
-
-#system prop for RmNet Data
-persist.rmnet.data.enable=true
-persist.data.wda.enable=true
-persist.data.df.dl_mode=5
-persist.data.df.ul_mode=5
-persist.data.df.agg.dl_pkt=10
-persist.data.df.agg.dl_size=4096
-persist.data.df.mux_count=8
-persist.data.df.iwlan_mux=9
-persist.data.df.dev_name=rmnet_usb0
-
-#property to enable user to access Google WFD settings
-persist.debug.wfd.enable=1
+# Display (SF)
 debug.sf.enable_hwc_vds=1
-##property to choose between virtual/external wfd display
-persist.sys.wfd.virtual=0
+debug.sf.latch_unsignaled=1
 
-# enable tunnel encoding for amrwb
-tunnel.audio.encode = true
+# Display (GFX)
+ro.gfx.driver.0=com.oneplus.gpudrivers.kona.api30
+ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
 
-#Buffer size in kbytes for compress offload playback
-audio.offload.buffer.size.kb=32
-
-#Enable offload audio video playback by default
-av.offload.enable=true
-
-#enable voice path for PCM VoIP by default
-use.voice.path.for.pcm.voip=true
-
-# system prop for NFC DT
-ro.nfc.port=I2C
-
-#enable dsp gapless mode by default
-audio.offload.gapless.enabled=true
-
-#initialize QCA1530 detection
-sys.qca1530=detect
-
-#Enable stm events
-persist.debug.coresight.config=stm-events
-
-#hwui properties
+# Display (HWUI)
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
 ro.hwui.r_buffer_cache_size=8
@@ -169,117 +59,80 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
 
+# Enable IZat OptInApp overlay
+persist.vendor.overlay.izat.optin=rro
+
+# Enable stm events
+persist.debug.coresight.config=stm-events
+
 config.disable_rtt=true
 
-#Bringup properties
-persist.sys.force_sw_gles=1
-persist.vendor.radio.atfwd.start=true
-ro.kernel.qemu.gles=0
-qemu.hw.mainkeys=0
-
-#Increase cached app limit
-ro.vendor.qti.sys.fw.bg_apps_limit=60
-
-#Enable ZRAM
-ro.vendor.qti.config.zram=true
-
-#ifdef VENDOR_EDIT
+# Light
 persist.vendor.naruto.light.support=true
-#endif
 
-#ifdef VENDOR_EDIT
-#kushal.modi@Multimedia, 2020/03/31, enable monitor Rotation
-ro.audio.monitorRotation=true
-#endif
+# Media
+debug.stagefright.ccodec=1
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+vendor.mm.enable.qcom_parser=16711679
+persist.mm.enable.prefetch=true
+ro.media.recorder-max-base-layer-fps = 60
 
-#ifdef VENDOR_EDIT
-#lifei@OnLineRD.MultiMediaService, 2020/04/13, Integrated Dirac sound effect AIP 3.2.5
-ro.dirac.acs.controller=gef
-ro.dirac.acs.storeSettings=1
-ro.dirac.acs.ignore_error=1
-ro.dirac.gef.ext.appt=0x00011130,0x00011134,0x00011135,0x00011131
-ro.dirac.gef.ext.did=10
-ro.dirac.gef.ext.mid=0x10012DE1
-ro.dirac.gef.ext.tid=0x10012D01
-ro.dirac.gef.int.appt=0x00011130,0x00011134,0x00011135,0x00011131
-ro.dirac.gef.int.did=15
-ro.dirac.gef.int.mid=0x10012DE0
-ro.dirac.gef.int.tid=0x10012D00
-ro.dirac.path=/vendor/etc/dirac
-#endif
+# NFC
+ro.nfc.port=I2C
 
-#IOP properties
-vendor.iop.enable_uxe=1
-vendor.perf.iop_v3.enable=true
+# NTP
+persist.backup.ntpServer="0.pool.ntp.org"
 
-#Property to enable perf boosts from System Server
-vendor.perf.gestureflingboost.enable=true
-
-#Enable ULMK properties
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=15
-
-#Property to enable scroll pre-obtain view
-ro.vendor.scroll.preobtain.enable=true
-
-#ifdef VENDOR_EDIT
-#Expose aux camera for below packages
-vendor.camera.aux.packagelist=com.android.systemui,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
-#Expose full capability to below packages
-persist.vendor.camera.privapp.list=com.oneplus.camera,com.oem.autotest,com.oneplus.factorymode
-#endif
-
-#ifdef VENDOR_EDIT
-#byron@Camera, 2020/01/13, config prop for full enable offline jpeg
-vendor.camera.algo.jpeghwencode=1
-#Byron@Camera, 2020/1/13, config prop for camera nightscape hardcopy
-vendor.arcsoft.sn_isHardCopy=0
-#endif
-
-#ifdef VENDOR_EDIT
-#xuejie.wen@Connectivity, 2019/11/30, [INT-6139] Add for solve audio crash
-persist.vendor.bt.a2dp.hal.implementation=true
-
-#ifdef VENDOR_EDIT
-#if OP_FEATURE_MM_24BIT == 1
-#mohammed.ahmed@MM.Audio, 2020/02/13, use 24bit offload playback
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
-#endif
-#endif
-#johnny.tsai@oneplus.net,2019/08/14,It is Google design not to bring down Data call when Wifi is up for inger timer
+# RIL
+ro.vendor.use_data_netmgrd=true
+persist.vendor.data.mode=concurrent
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+ro.telephony.default_network=33,33
 persist.netmon.linger=5000
-#endif
-
-# ifdef VENDOR_EDIT
-# rad.yeh@NETWORK, 2019/07/25, add property to disable ims library logs
 persist.vendor.ims.disableADBLogs=1
-# endif
+persist.vendor.radio.atfwd.start=true
+telephony.lteOnCdmaDevice=1
 
-# gummadapu.madhav@SYSTEM, 2020/03/30, Modify default density to 420
-ro.sf.lcd_density=420
+persist.timed.enable=true
+persist.fuse_sdcard=true
 
-# swinder@IMAGING, 2020/04/02, Enable all features for 6GB device
-persist.vendor.camera.limitRAM=0
+# RIL (rmnet)
+persist.rmnet.data.enable=true
+persist.data.wda.enable=true
+persist.data.df.dl_mode=5
+persist.data.df.ul_mode=5
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.mux_count=8
+persist.data.df.iwlan_mux=9
+persist.data.df.dev_name=rmnet_usb0
 
-#ifdef VENDOR_EDIT
-#shardul.bankar@BSP.Sensors, 2020/04/03, add for fusion light support
-persist.vendor.naruto.light.support=true
-#endif
+# Sensor
+persist.vendor.sensors.enable.mag_filter=true
 
+# WiFI
+sys.qca1530=detect
 
-#ifdef VENDOR_EDIT
-#tangxinlou@wingtech.bt, 2020/10/10,After playing the WeChat voice, the music is paused
-persist.vendor.btstack.avrcp-playstatus.blacklist=true
-#endif
-
-#ifdef VENDOR_EDIT
-#tangxinlou@wt.bt, 2020/10/10, only load patch with open phone
-persist.vendor.service.bdroid.soc.alwayson=true
-#endif
-
-#ifdef ODM_ET_EDIT
-#wuyuexiu@ODM_WT.CONN.NFC, 2020/10/19,[BILLIE8-8535],Enable Non-Standard NFC Tag support
-persist.vendor.nfc.nonstdenable=true
-#endif
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
+# WFD
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
