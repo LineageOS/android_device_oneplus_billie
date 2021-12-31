@@ -179,7 +179,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 vendor.power.pasr.enabled=false
 
 # Priv-app Permissions
-ro.control_privapp_permissions=log
+ro.control_privapp_permissions=enforce
 
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
