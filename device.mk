@@ -30,6 +30,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+PRODUCT_PACKAGES += \
+    OnePlusN10SettingsProvider
+
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/billie \
