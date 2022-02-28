@@ -225,9 +225,7 @@ PRODUCT_PACKAGES += \
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
-    android.hardware.boot-service.qti.recovery \
-    bootctrl.lito \
-    bootctrl.lito.recovery
+    android.hardware.boot-service.qti.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
