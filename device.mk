@@ -40,6 +40,8 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon \
     WifiResTarget \
+    OnePlusN10Frameworks \
+    OnePlusN10Settings \
     OnePlusN10SettingsProvider
 
 # Soong Namespace
