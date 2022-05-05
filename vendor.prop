@@ -18,7 +18,6 @@ persist.vendor.audio.voicecall.speaker.stereo=false
 ro.config.vc_call_vol_steps=9
 ro.vendor.audio.sdk.ssr=false
 ro.vendor.audio.sdk.fluencetype=fluence
-ro.vendor.qspm.enable=true
 vendor.audio_hal.period_size=192
 vendor.audio.tunnel.encode=false
 vendor.audio.offload.buffer.size.kb=32
