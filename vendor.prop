@@ -135,9 +135,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# Power
-vendor.power.pasr.enabled=false
-
 # Priv-app Permissions
 ro.control_privapp_permissions=enforce
 
