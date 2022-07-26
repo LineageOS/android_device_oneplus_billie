@@ -41,7 +41,7 @@ void vendor_load_properties()
     string prop;
     string model = GetProperty("ro.boot.product.hardware.sku", "");
 
-    if (model == "8") {
+    if (model == "8" || model == "9") {
         prop = "ssss";
     } else {
         prop = "dsds";
