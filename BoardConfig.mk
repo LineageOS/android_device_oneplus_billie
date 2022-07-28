@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+BOARD_VENDOR := oneplus
+
 DEVICE_PATH := device/oneplus/billie
 
 # Arch

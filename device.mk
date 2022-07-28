@@ -29,7 +29,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
-    device/oneplus/billie
+    device/oneplus/billie \
+    hardware/oneplus
 
 # Screen density
 TARGET_SCREEN_HEIGHT := 2400
@@ -223,6 +224,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor
 
+# Doze
+PRODUCT_PACKAGES += \
+    OnePlusDoze
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -371,9 +376,6 @@ PRODUCT_PACKAGES += \
 
 # OnePlus
 PRODUCT_PACKAGES += \
-    OnePlusDoze
-
-PRODUCT_PACKAGES += \
     oneplus-fwk
 
 PRODUCT_BOOT_JARS += \
@@ -476,7 +478,7 @@ PRODUCT_BOOT_JARS += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.billie
+    vendor.lineage.touch@1.0-service.oneplus
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -493,7 +495,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
+    vendor.qti.hardware.vibrator.service.oneplus
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
