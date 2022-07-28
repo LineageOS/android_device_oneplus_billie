@@ -1,2 +1,0 @@
-# SSR
-genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys3/name                                    u:object_r:sysfs_ssr_toggle:s0
