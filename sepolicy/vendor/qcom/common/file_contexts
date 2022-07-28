@@ -1,5 +1,4 @@
 # HALs
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus                                   u:object_r:hal_lineage_touch_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.1-service                                       u:object_r:hal_perf_default_exec:s0
 
 /(vendor|system/vendor)/bin/wifi-mac-generator                                    u:object_r:wifi-mac-generator_exec:s0

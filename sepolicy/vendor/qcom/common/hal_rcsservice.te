@@ -1,4 +1,0 @@
-# add imsfactory to HIDl interface
-add_hwservice(hal_rcsservice, hal_imsfactory_hwservice)
-
-r_dir_file(hal_rcsservice, sysfs_ssr)
