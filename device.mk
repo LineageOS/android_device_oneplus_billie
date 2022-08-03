@@ -204,6 +204,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdisplayconfig \
     libdisplayconfig.vendor \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
     libqdMetaData \
     libtinyxml \
     libvulkan \
