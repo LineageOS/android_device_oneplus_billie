@@ -112,7 +112,10 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     libaudio-resampler \
+    libaudiopreprocessing \
     libaudioroute \
+    libbatterylistener \
+    libbundlewrapper \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -122,14 +125,25 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
+    libcirrusspkrprot \
+    libcomprcapture \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libexthwplugin \
     libhdmiedid \
     libhfp \
+    libldnhncr \
+    libreverbwrapper \
     libsndmonitor \
     libspkrprot \
-    libssrec
+    libssrec \
+    libvisualizer
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    audio.bluetooth.default \
+    audio_amplifier.lito \
     audio.r_submix.default \
     audio.usb.default
 
@@ -139,6 +153,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@2.0-util \
     android.hardware.audio.common@6.0-util \
     android.hardware.audio.effect@6.0-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_COPY_FILES += \
