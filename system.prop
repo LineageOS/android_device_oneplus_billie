@@ -67,9 +67,6 @@ persist.debug.coresight.config=stm-events
 
 config.disable_rtt=true
 
-# Light
-persist.vendor.naruto.light.support=true
-
 # Media
 debug.stagefright.ccodec=1
 media.stagefright.enable-player=true
