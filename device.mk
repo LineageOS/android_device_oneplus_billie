@@ -440,6 +440,9 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
+    libavservices_minijail_vendor \
     librmnetctl \
     libxml2
 
