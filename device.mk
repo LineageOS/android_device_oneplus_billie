@@ -422,7 +422,7 @@ PRODUCT_PACKAGES += \
     libxml2
 
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.2 \
+    android.hardware.radio@1.5 \
     android.hardware.radio.config@1.1
 
 # Ramdisk
