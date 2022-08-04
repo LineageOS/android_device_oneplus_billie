@@ -3,7 +3,6 @@
 
 # dev nodes
 /dev/esfp0                                        u:object_r:fingerprintd_device:s0
-/dev/goodix_fp                                    u:object_r:fingerprintd_device:s0
 /dev/param                                        u:object_r:param_device:s0
 
 # HALs
