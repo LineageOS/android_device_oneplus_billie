@@ -819,20 +819,14 @@ vendor/etc/permissions/com.fingerprints.fpmmi.xml
 -vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
 -vendor/framework/com.fingerprints.fpmmi.jar
 vendor/lib/fp_hal_extension.so
-vendor/lib/hw/goodix.fod.lito.so
-vendor/lib/libgf_ud_hal.so
 vendor/lib/libRbsFlow.so
-vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib/vendor.oneplus.fingerprint.extension@1.0.so
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/fp_hal_extension.so
 vendor/lib64/hw/fingerprint.egis.default.so
-vendor/lib64/hw/goodix.fod.lito.so
 vendor/lib64/hw/libets_teeclient_v2.so
-vendor/lib64/libgf_ud_hal.so
 vendor/lib64/libRbsFlow.so
 vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.oneplus.fingerprint.extension@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
