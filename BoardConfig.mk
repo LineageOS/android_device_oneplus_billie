@@ -63,7 +63,7 @@ TARGET_KERNEL_CONFIG := vendor/billie-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm6350
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := billie,OnePlusN10
+TARGET_OTA_ASSERT_DEVICE := billie, OnePlusN10
 
 # Audio
 USE_CUSTOM_AUDIO_POLICY := 1
