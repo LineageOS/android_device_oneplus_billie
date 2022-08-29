@@ -224,7 +224,7 @@ BOARD_USES_QCOM_HARDWARE := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy - Common
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 
 # Sepolicy - billie
 include device/oneplus/billie/sepolicy/billie-sepolicy.mk
