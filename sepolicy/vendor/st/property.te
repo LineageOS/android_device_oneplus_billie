@@ -1,2 +1,1 @@
-vendor_public_prop(persist_nfc_prop);
 vendor_public_prop(vendor_nfc_prop);
