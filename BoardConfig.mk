@@ -76,6 +76,8 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/
 TARGET_KERNEL_CONFIG := vendor/billie-perf_defconfig vendor/debugfs.config
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm6350
 
+TARGET_KERNEL_NO_GCC := true
+
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := billie,OnePlusN10
 
