@@ -1050,7 +1050,7 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # IRQ balance
 vendor/bin/msm_irqbalance
-vendor/etc/msm_irqbalance.conf
+vendor/etc/msm_irqbalance.conf|ea5527b9303721f8eae20b61e6d27843ff8a95a5
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.lito.so

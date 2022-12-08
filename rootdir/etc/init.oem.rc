@@ -1216,6 +1216,13 @@ on property:persist.vendor.oem.dump=0
 on property:persist.vendor.oem.dump=1
     setprop persist.vendor.zwriteback.backup 1
 
+on property:vendor.post_boot.parsed=1
+    # IRQ Tuning
+    # IRQ 214: msm_drm
+    # IRQ 58: kgsl_3d0_irq
+    write /proc/irq/214/smp_affinity_list 2
+    write /proc/irq/58/smp_affinity_list 1
+
 #ifdef ODM_WT_EDIT Kai.Cao@ODM_WT.NW.SIM,BILLIE8-6704, 2020/07/13,Support single and dual card solutions
 on property:ro.boot.rf_version=0 && property:ro.boot.project_codename=billie8
     setprop persist.radio.multisim.config "ssss"

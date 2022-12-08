@@ -65,6 +65,9 @@ function blob_fixup() {
         vendor/etc/libnfc-nxp.conf)
             sed -i "/NXP_NFC_DEV_NODE/ s/pn553/nq-nci/" "${2}"
             ;;
+        vendor/etc/msm_irqbalance.conf)
+            sed -i "s/IGNORED_IRQ=19,21,38$/&,115,332/" "${2}"
+            ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so|vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so)
             "${SIGSCAN}" -p "CF 0A 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
