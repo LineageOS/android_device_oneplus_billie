@@ -425,7 +425,6 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
-    NfcNci \
     Tag
 
 PRODUCT_COPY_FILES += \
