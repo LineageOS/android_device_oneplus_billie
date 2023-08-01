@@ -683,10 +683,6 @@ vendor/lib64/libcvp_common.so
 vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
-# Display
-vendor/bin/hw/vendor.oneplus.hardware.display@1.0-service
-vendor/etc/init/vendor.oneplus.hardware.display@1.0-service.rc
-
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
 
