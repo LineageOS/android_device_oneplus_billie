@@ -491,6 +491,7 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
     libgui_vendor \
     libprotobuf-cpp-full \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
     librmnetctl \
     libxml2
 
