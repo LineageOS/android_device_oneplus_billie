@@ -31,6 +31,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
     OnePlusN10SettingsProvider \
     OnePlusN10Snap
 
