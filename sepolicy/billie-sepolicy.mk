@@ -19,6 +19,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/qcom/common
 BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/qcom/sm6350
 
 # OnePlus
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/oneplus/billie/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/oneplus
-
 BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/billie/sepolicy/vendor/st
