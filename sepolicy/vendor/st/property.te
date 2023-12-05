@@ -1,2 +1,2 @@
-type persist_nfc_prop, property_type;
-type vendor_nfc_prop, property_type;
+vendor_public_prop(persist_nfc_prop);
+vendor_public_prop(vendor_nfc_prop);
