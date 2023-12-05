@@ -29,7 +29,6 @@ vendor.camera.aux.packagelist=com.oneplus.factorymode,com.oneplus.camera,com.oem
 
 # Charger
 persist.sys.chgdisabled=0
-ro.charger.enable_suspend = 1
 
 # CNE
 persist.vendor.cne.feature=1
