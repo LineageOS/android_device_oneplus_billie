@@ -160,7 +160,6 @@ PRODUCT_PACKAGES += \
     libvisualizer
 
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
     audio.bluetooth.default \
     audio_amplifier.lito \
     audio.r_submix.default \
