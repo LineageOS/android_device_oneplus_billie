@@ -1,5 +1,8 @@
 # sysfs
 type sysfs_fsc, sysfs_type, fs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_ssr, sysfs_type, fs_type;
+type sysfs_ssr_toggle,  sysfs_type, fs_type;
 
 # Proc
 type proc_touchpanel, fs_type, proc_type;

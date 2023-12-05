@@ -1,3 +1,9 @@
+# SSR
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys3                                                                                                                                                                u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys3/name                                                                                                                                                           u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys3/crash_reason                                                                                                                                                   u:object_r:sysfs_ssr:s0
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys3/restart_level                                                                                                                                                  u:object_r:sysfs_ssr_toggle:s0
+
 # Wakeup source stats
 genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup/wakeup                                                                                                                                                         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1e00000.qcom,ipa/wakeup/wakeup                                                                                                                                                            u:object_r:sysfs_wakeup:s0
