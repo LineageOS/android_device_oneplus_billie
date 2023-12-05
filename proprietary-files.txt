@@ -200,7 +200,6 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Camera
-vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/bin/hw/vendor.oneplus.hardware.camera@1.0-service
 vendor/bin/hw/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service
 vendor/bin/vl53l1_daemon_main
@@ -221,7 +220,6 @@ vendor/etc/camera/distortion_result_front.bin
 vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode
 vendor/etc/camera/model.data
 vendor/etc/camera/segment.dlc
-vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 vendor/etc/init/vendor.oneplus.hardware.camera@1.0-service.rc
 vendor/etc/init/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service.rc
 vendor/firmware/CAMERA_ICP.elf
