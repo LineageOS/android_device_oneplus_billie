@@ -141,7 +141,6 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libtinycompress \
-    libtinycompress.vendor \
     libvolumelistener
 
 PRODUCT_PACKAGES += \
@@ -158,7 +157,6 @@ PRODUCT_PACKAGES += \
     libreverbwrapper \
     libsndmonitor \
     libspkrprot \
-    libssrec \
     libvisualizer
 
 PRODUCT_PACKAGES += \
@@ -251,10 +249,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig \
-    libdisplayconfig.vendor \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libqdMetaData \
     libtinyxml \
     libvulkan \
@@ -344,9 +339,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system
 
 # IDC
 PRODUCT_COPY_FILES += \
