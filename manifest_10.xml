@@ -1,15 +1,4 @@
 <manifest version="2.0" type="device" target-level="4">
-    <!-- secure element -->
-    <hal format="hidl" override="true">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>ISecureElement</name>
-            <instance>SIM1</instance>
-            <instance>SIM2</instance>
-        </interface>
-    </hal>
     <hal format="hidl" override="true">
         <name>vendor.qti.hardware.data.iwlan</name>
         <transport>hwbinder</transport>
