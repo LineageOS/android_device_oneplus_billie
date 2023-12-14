@@ -1611,6 +1611,7 @@ vendor/lib64/libtime_genoff.so
 
 # Touchscreen Firmware
 vendor/firmware/Himax_firmware.bin
+vendor/firmware/Himax_firmware.bin:recovery/root/vendor/firmware/Himax_firmware.bin
 vendor/firmware/Himax_firmware_TEST.img
 vendor/firmware/hx_criteria.csv
 vendor/firmware/tp/FW_20813_FT3518.img
