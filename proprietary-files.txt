@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OnePlusN10-user-11-RKQ1.201217.002-2205061852-release-keys
+# All unpinned blobs below are extracted from OnePlusN10-user-11-RKQ1.201217.002-2311081107-release-keys
 
 # ADSP
 vendor/bin/adsprpcd
