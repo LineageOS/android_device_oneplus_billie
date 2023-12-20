@@ -105,7 +105,6 @@ debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
 debug.sf.perf_fps_late_sf_phase_offset_ns=-5000000
 debug.sf.perf_fps_early_phase_offset_ns=-5000000
 debug.sf.perf_fps_early_gl_phase_offset_ns=-5000000
-persist.demo.hdmirotationlock=false
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.color_mode=0
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lito.api30
