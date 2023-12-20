@@ -153,6 +153,9 @@ ro.netflix.bsp_rev=Q7250-19133-1
 # Partitions - FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
