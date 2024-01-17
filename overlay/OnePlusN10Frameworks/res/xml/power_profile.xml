@@ -63,8 +63,8 @@
         <value>168</value>
     </array>
     <item name="ambient.on">32</item>
-    <item name="screen.on">88.2</item>
-    <item name="screen.full">373.71</item>
+    <item name="screen.on.display0">88.2</item>
+    <item name="screen.full.display0">373.71</item>
     <item name="camera.flashlight">72</item>
     <item name="camera.avg">620</item>
     <item name="audio">34.66</item>
