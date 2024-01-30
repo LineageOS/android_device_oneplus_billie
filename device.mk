@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon \
     WifiResTarget \
-    OnePlusN10LineageSettings \
     OnePlusN10Frameworks \
     OnePlusN10Settings \
     OnePlusN10SettingsProvider \
