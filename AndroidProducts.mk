@@ -16,6 +16,3 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_billie.mk
-
-COMMON_LUNCH_CHOICES := \
-    lineage_billie-userdebug
