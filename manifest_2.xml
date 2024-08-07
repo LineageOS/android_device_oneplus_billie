@@ -1,4 +1,4 @@
-<manifest version="2.0" type="device" target-level="4">
+<manifest version="2.0" type="device" target-level="5">
     <hal format="hidl" override="true">
         <name>vendor.qti.hardware.data.iwlan</name>
         <transport>hwbinder</transport>
