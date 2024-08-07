@@ -230,7 +230,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libstdc++.vendor
+    libstdc++_vendor
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
