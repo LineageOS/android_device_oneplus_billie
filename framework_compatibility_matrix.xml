@@ -1,0 +1,133 @@
+<compatibility-matrix version="2.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>android.hardware.light</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ILight</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>vendor.egistec.hardware.fingerprint</name>
+        <version>4.0</version>
+        <interface>
+            <name>IBiometricsFingerprintRbs</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.eventprocessor</name>
+        <version>1.0</version>
+        <interface>
+            <name>INxpEseEvtProcessor</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.nxpnfc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.uwb</name>
+        <version>1.0</version>
+        <interface>
+            <name>IUwb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxpnq330.nxpese</name>
+        <version>1.0</version>
+        <interface>
+            <name>INxpEse</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>vendor.oneplus.fingerprint.extension</name>
+        <version>1.0</version>
+        <interface>
+            <name>IVendorFingerprintExtensions</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oneplus.hardware.CameraMDMHIDL</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOnePlusCameraMDM</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oneplus.hardware.camera</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOnePlusCameraProvider</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>vendor.oneplus.hardware.drmkey</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOneplusDrmKey</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oneplus.hardware.hypnus</name>
+        <version>1.0</version>
+        <interface>
+            <name>IHypnusUtil</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>vendor.oneplus.hardware.ifaa</name>
+        <version>2.0</version>
+        <interface>
+            <name>IOneplusIfaa</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>vendor.oneplus.hardware.param</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOneplusParam</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>vendor.oneplus.hardware.rpmb</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOneplusRpmb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="false">
+        <name>vendor.oneplus.hardware.wifi</name>
+        <version>1.1</version>
+        <interface>
+            <name>IOneplusWifi</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.radio.qcriNvOpt</name>
+        <version>1.0</version>
+        <interface>
+            <name>IqcriNvOpt</name>
+            <instance>qcrinvopt0</instance>
+            <instance>qcrinvopt1</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
