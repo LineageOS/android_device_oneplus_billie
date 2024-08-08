@@ -985,7 +985,7 @@ vendor/lib64/libqtikeymaster4.so
 
 # IMS
 system_ext/priv-app/ims/ims.apk
-system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvideocodec.so|d7456c7e3fe732ffe4a28e0dc0d7fbb7e5ce8da5
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
