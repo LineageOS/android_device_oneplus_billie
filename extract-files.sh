@@ -74,6 +74,9 @@ function blob_fixup() {
         vendor/lib64/libaps_frame_registration.so|vendor/lib64/libyuv2.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
         ;;
+        system_ext/lib64/lib-imsvideocodec.so)
+            "${PATCHELF}" --add-needed libgui_shim.so "${2}"
+        ;;
     esac
 }
 
