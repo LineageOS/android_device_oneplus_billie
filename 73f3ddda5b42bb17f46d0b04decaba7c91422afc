@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eaee9bda_49b813e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 28798
+      },
+      "writtenOn": "2024-09-03T14:31:21Z",
+      "side": 1,
+      "message": "Checked by applying a local update and succeeds, whereas the same failed.",
+      "revId": "73f3ddda5b42bb17f46d0b04decaba7c91422afc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
