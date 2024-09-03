@@ -162,9 +162,6 @@ persist.sys.fuse.passthrough.enable=true
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# Priv-app Permissions
-ro.control_privapp_permissions=enforce
-
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
 
