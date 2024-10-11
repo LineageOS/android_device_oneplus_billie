@@ -55,6 +55,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('/data/nfc', '/data/vendor/nfc'),
     'vendor/etc/libnfc-nxp.conf': blob_fixup()
         .regex_replace('NXP_NFC_DEV_NODE="/dev/pn553"', 'NXP_NFC_DEV_NODE="/dev/nq-nci"'),
+    'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
+        .add_line_if_missing('gettid: 1'),
     ('vendor/lib64/libaps_frame_registration.so', 'vendor/lib64/libyuv2.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/libdpps.so': blob_fixup()
