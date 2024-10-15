@@ -1,0 +1,39 @@
+#!/usr/bin/env -S PYTHONPATH=../../../tools/extract-utils python3
+#
+# SPDX-FileCopyrightText: 2024 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+from extract_utils.fixups_blob import (
+    blob_fixup,
+    blob_fixups_user_type,
+)
+from extract_utils.main import (
+    ExtractUtils,
+    ExtractUtilsModule,
+)
+
+blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/msm_irqbalance.conf': blob_fixup()
+        .regex_replace('IGNORED_IRQ=19,21,38$', 'IGNORED_IRQ=19,21,38,115,332'),
+    'vendor/etc/libnfc-nci.conf': blob_fixup()
+        .regex_replace('/data/nfc', '/data/vendor/nfc'),
+    'vendor/etc/libnfc-nxp.conf': blob_fixup()
+        .regex_replace('NXP_NFC_DEV_NODE="/dev/pn553"', 'NXP_NFC_DEV_NODE="/dev/nq-nci"'),
+    ('vendor/lib64/libaps_frame_registration.so', 'vendor/lib64/libyuv2.so'): blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
+    ('vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so', 'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so'): blob_fixup()
+        .sig_replace('CF 0A 00 94', '1F 20 03 D5'),
+}  # fmt: skip
+
+module = ExtractUtilsModule(
+    'billie',
+    'oneplus',
+    blob_fixups=blob_fixups,
+)
+
+if __name__ == '__main__':
+    utils = ExtractUtils.device(module)
+    utils.run()
