@@ -34,15 +34,12 @@ PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := Nord N10 5G
 
-PRODUCT_SYSTEM_NAME := OnePlusN10
-PRODUCT_SYSTEM_DEVICE := OnePlusN10
-
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="OnePlusN10-user 11 RKQ1.201217.002 2311081107 release-keys" \
-    TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
-    TARGET_NAME=$(PRODUCT_SYSTEM_NAME)
-
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := OnePlus/OnePlusN10/OnePlusN10:11/RKQ1.201217.002/2311081107:user/release-keys
+    BuildDesc="OnePlusN10-user 11 RKQ1.201217.002 2311081107 release-keys" \
+    BuildFingerprint=OnePlus/OnePlusN10/OnePlusN10:11/RKQ1.201217.002/2311081107:user/release-keys \
+    DeviceName=OnePlusN10 \
+    DeviceProduct=OnePlusN10 \
+    SystemDevice=OnePlusN10 \
+    SystemName=OnePlusN10
