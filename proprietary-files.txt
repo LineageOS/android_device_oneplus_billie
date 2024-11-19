@@ -507,7 +507,7 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 vendor/lib64/libhdr_tm.so
 
 # Display (HWC)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_CHECKELF;MAKE_COPY_RULE;MODULE_SUFFIX=_vendor
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;MAKE_COPY_RULE;MODULE_SUFFIX=_vendor
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/lib64/libdpps.so
