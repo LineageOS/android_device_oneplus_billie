@@ -12,8 +12,6 @@
 #Load WLAN driver
 
 import /vendor/etc/init/hw/init.cust.rc
-#ethan.peng@Connectivity,2020/12/29,close uicc since orange
-import /vendor/etc/init/hw/init.uicc.rc
 
 on property:wlan.driver.status=ok
     start load_wlan_driver
@@ -40,6 +38,11 @@ service wlchgd /vendor/bin/wlchgd
     disabled
     seclabel u:r:wlchgd:s0
     group root system
+
+on early-init
+    # Radio
+    exec_start oem-sh
+    setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
 
 on fs
     mount ext4 /dev/block/bootdevice/by-name/op1 /mnt/vendor/op1 ro barrier=1 discard context=u:object_r:op1_file:s0
@@ -1194,6 +1197,11 @@ service chmodkeyboxxmldir /system/bin/chmod 777 -R /mnt/vendor/op2/.lii
     oneshot
     seclabel u:r:vold:s0
 # endif
+
+service oem-sh /odm/bin/init.oem.sh
+    user root
+    group root
+    oneshot
 
 #alden.zhang@OPTI, 2020/7/18. [OSP-8064], add for IOLIMIT
 on property:persist.sys.iolimiter.enable=true

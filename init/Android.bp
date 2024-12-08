@@ -14,23 +14,18 @@
 // limitations under the License.
 //
 
-cc_library_static {
-    name: "libinit_billie",
-    recovery_available: true,
-    srcs: ["init_billie.cpp"],
-    include_dirs: [
-        "system/libbase/include",
-        "system/core/init"
-    ],
-    shared_libs: ["libbase"]
-}
-
 // files that live under device/qcom/common/rootdir/etc/
 
 sh_binary {
     name: "init.class_main.sh",
     src: "init.class_main.sh",
     vendor: true,
+}
+
+sh_binary {
+    name: "init.oem.sh",
+    src: "init.oem.sh",
+    device_specific: true,
 }
 
 sh_binary {
@@ -145,12 +140,5 @@ prebuilt_etc {
 prebuilt_etc {
     name: "fstab.zram",
     src: "fstab.zram",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.uicc.rc",
-    src: "init.uicc.rc",
-    sub_dir: "init/hw",
     vendor: true,
 }
