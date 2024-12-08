@@ -17,10 +17,6 @@
 cc_library_static {
     name: "libinit_billie",
     recovery_available: true,
+    shared_libs: ["libbase"],
     srcs: ["init_billie.cpp"],
-    include_dirs: [
-        "system/libbase/include",
-        "system/core/init"
-    ],
-    shared_libs: ["libbase"]
 }
