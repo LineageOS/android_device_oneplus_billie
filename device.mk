@@ -41,12 +41,11 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     SystemUIResCommon \
     TelephonyResCommon \
-    WifiResCommon \
-    WifiResTarget \
     OnePlusN10Frameworks \
     OnePlusN10Settings \
     OnePlusN10SettingsProvider \
-    OnePlusN10SystemUI
+    OnePlusN10SystemUI \
+    OnePlusN10WifiOverlay
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \

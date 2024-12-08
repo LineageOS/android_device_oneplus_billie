@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2022 The Linux Foundation
-     SPDX-License-Identifier: BSD-3-Clause
--->
 <resources>
 
     <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
@@ -47,15 +43,17 @@
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
     <bool name="config_wifi_softap_sae_supported">true</bool>
 
-    <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
-    <integer name="config_wifiDelayDisconnectOnImsLostMs">1000</integer>
+    <!-- Enable concurrent restricted connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaRestrictedConcurrencyEnabled">true</bool>
 
-    <!-- Integer indicating maximum hardware supported client number of soft ap -->
-    <integer name="config_wifiHardwareSoftapMaxClientCount">32</integer>
+    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
+    <bool name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
 
-    <!-- List of allowed channels in 2GHz band for softap. If the device doesn't want to restrict
-         channels this should be empty. Values is a comma separated channel string and/or channel
-         range string like '1-6,11'. -->
-    <string name="config_wifiSoftap2gChannelList" />
+    <!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
+    <bool name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+    <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
 
 </resources>
