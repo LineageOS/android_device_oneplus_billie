@@ -1195,6 +1195,16 @@ service chmodkeyboxxmldir /system/bin/chmod 777 -R /mnt/vendor/op2/.lii
     seclabel u:r:vold:s0
 # endif
 
+# Radio
+on property:vendor.radio.multisim.config=*
+    setprop persist.radio.multisim.config ${vendor.radio.multisim.config}
+
+service oem-sh /odm/bin/init.oem.sh
+    class late_start
+    user system
+    group system radio
+    oneshot
+
 #alden.zhang@OPTI, 2020/7/18. [OSP-8064], add for IOLIMIT
 on property:persist.sys.iolimiter.enable=true
     write /proc/iolimit_enable 1
