@@ -12,4 +12,6 @@
     <!-- Channel list for softap 6G band. Empty means all channels -->
     <string name="config_wifiSoftap6gChannelList" />
 
+    <!-- Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">OnePlus Nord N10</string>
 </resources>
