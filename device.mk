@@ -516,6 +516,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.class_main.sh \
+    init.oem.sh \
     init.qti.dcvs.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
