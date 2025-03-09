@@ -287,6 +287,10 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
+
 # Framework detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \

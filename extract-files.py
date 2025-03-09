@@ -59,6 +59,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('NXP_NFC_DEV_NODE="/dev/pn553"', 'NXP_NFC_DEV_NODE="/dev/nq-nci"'),
     ('vendor/lib64/libaps_frame_registration.so', 'vendor/lib64/libyuv2.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'vendor/lib64/hw/fingerprint.default.so': blob_fixup()
+        .binary_regex_replace(b'fingerprint.egis', b'fingerprint\x00\x00\x00\x00\x00'),
     ('system_ext/lib/libwfddisplayconfig.so', 'system_ext/lib64/libwfddisplayconfig.so'): blob_fixup()
         .replace_needed('libdisplayconfig.qti.so', 'libdisplayconfig.system.qti.so'),
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
