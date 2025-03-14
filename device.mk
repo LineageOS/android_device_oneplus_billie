@@ -139,7 +139,6 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     libaudio-resampler \
-    libaudiopreprocessing \
     libaudioroute \
     libbatterylistener \
     libbundlewrapper \
@@ -334,9 +333,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    libhidltransport \
     libhidltransport.vendor \
-    libhwbinder \
     libhwbinder.vendor
 
 PRODUCT_PACKAGES += \
@@ -418,10 +415,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
-# Net
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
-
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
@@ -433,7 +426,6 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
-    com.android.nfc_extras \
     NfcNci \
     Tag
 
@@ -585,12 +577,7 @@ PRODUCT_PACKAGES += \
 
 # Update engine
 PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
+    update_engine_sideload
 
 # USB
 PRODUCT_PACKAGES += \
@@ -634,7 +621,6 @@ PRODUCT_PACKAGES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl \
     libpng.vendor:32 \
     libwfdaac_vendor
 
