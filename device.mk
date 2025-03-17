@@ -546,6 +546,9 @@ PRODUCT_PACKAGES += \
     fstab.qcom.ramdisk \
     fstab.zram
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.postinstall:$(TARGET_COPY_OUT_PRODUCT)/etc/fstab.postinstall
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy

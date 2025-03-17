@@ -183,6 +183,10 @@ BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
+# Puts odex files on system_other, as well as causing dex files not to get
+# stripped from APKs.
+BOARD_USES_SYSTEM_OTHER_ODEX := true
+
 # Partitions - Userdata
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 236009631744
 

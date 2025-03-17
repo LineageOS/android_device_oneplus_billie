@@ -135,6 +135,7 @@ dalvik.vm.heapgrowthlimit=256m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=512k
 dalvik.vm.heapmaxfree=8m
+ro.cp_system_other_odex=1
 
 # DRM
 drm.service.enabled=true
