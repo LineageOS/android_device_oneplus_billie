@@ -7,3 +7,6 @@ audio.sys.offload.pstimeout.secs=3
 
 # Charger
 ro.charger.disable_init_blank=true
+
+# eBPF
+ro.bpf.kver_override=5.10.239
