@@ -255,7 +255,7 @@ PRODUCT_PACKAGES += \
     libsdmutils
 
 PRODUCT_PACKAGES += \
-    gralloc.lito
+    gralloc.qcom
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
