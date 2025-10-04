@@ -160,7 +160,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
-    audio_amplifier.lito \
+    audio_amplifier.qcom \
     audio.r_submix.default \
     audio.usb.default
 
