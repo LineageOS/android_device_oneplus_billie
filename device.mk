@@ -576,7 +576,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus
+    vendor.lineage.touch-service.oneplus
 
 # Update engine
 PRODUCT_PACKAGES += \
