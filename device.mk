@@ -373,7 +373,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.oneplus
+    vendor.lineage.livedisplay-service.oneplus
 
 # Media - Codec2 modules
 PRODUCT_PACKAGES += \
