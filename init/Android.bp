@@ -78,13 +78,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.usb.configfs.rc",
-    src: "init.usb.configfs.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.qcom.rc",
     src: "init.qcom.rc",
     sub_dir: "init/hw",
