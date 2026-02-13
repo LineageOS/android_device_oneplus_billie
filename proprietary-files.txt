@@ -297,7 +297,6 @@ vendor/lib64/com.qti.feature2.stub.bitra.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.bitra.so
 vendor/lib64/com.qti.feature2.swmf.so
-vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.bitra.so
 vendor/lib64/hw/com.qti.chi.override.so
