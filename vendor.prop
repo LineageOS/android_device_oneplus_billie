@@ -132,14 +132,6 @@ vendor.display.use_smooth_motion=1
 vendor.gralloc.disable_ubwc=0
 vendor.opengles.version=196610
 
-# Dalvik
-dalvik.vm.heapstartsize=8m
-dalvik.vm.heapsize=512m
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapmaxfree=8m
-
 # DRM
 drm.service.enabled=true
 persist.vendor.dpmhalservice.enable=1
