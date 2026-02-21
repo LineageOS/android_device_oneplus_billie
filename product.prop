@@ -7,6 +7,3 @@ audio.sys.offload.pstimeout.secs=3
 
 # Charger
 ro.charger.disable_init_blank=true
-
-# Use /product/etc/fstab.postinstall to mount system_other
-ro.postinstall.fstab.prefix=/product
