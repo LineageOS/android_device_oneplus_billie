@@ -1,5 +1,6 @@
-# Fastcharge
+# Lineage Health
 genfscon sysfs /class/power_supply/battery/switch_dash                                    u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/power_supply/battery/charging_enabled                               u:object_r:vendor_sysfs_battery_supply:s0
 
 # sysfs
 genfscon sysfs /module/stmvl53l1                                    u:object_r:sysfs_vl53l1:s0
