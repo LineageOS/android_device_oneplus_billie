@@ -38,7 +38,6 @@ lib_fixups: lib_fixups_user_type = {
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'libmmosal',
-        'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
 }
@@ -58,8 +57,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/hw/fingerprint.default.so': blob_fixup()
         .binary_regex_replace(b'fingerprint.egis', b'fingerprint\x00\x00\x00\x00\x00'),
-    ('system_ext/lib/libwfddisplayconfig.so', 'system_ext/lib64/libwfddisplayconfig.so'): blob_fixup()
-        .replace_needed('libdisplayconfig.qti.so', 'libdisplayconfig.system.qti.so'),
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so'),
     ('vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so', 'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so'): blob_fixup()

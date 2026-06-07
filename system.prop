@@ -127,5 +127,4 @@ persist.vendor.sensors.enable.mag_filter=true
 sys.qca1530=detect
 
 # WFD
-persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
