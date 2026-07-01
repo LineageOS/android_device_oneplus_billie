@@ -194,6 +194,7 @@ TARGET_SCREEN_DENSITY := 440
 
 # Sepolicy - Common
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/lineage/sepolicy/libion/sepolicy.mk
 
 # Sepolicy - billie
 include device/oneplus/billie/sepolicy/billie-sepolicy.mk
