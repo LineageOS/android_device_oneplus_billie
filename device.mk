@@ -233,9 +233,9 @@ PRODUCT_PACKAGES += \
     libstdc++_vendor
 
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
+    lineage.frameworks.displayservice@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -263,6 +263,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.qti.hardware.memtrack-service
+
+$(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
 
 # Doze
 PRODUCT_PACKAGES += \
