@@ -1,4 +1,4 @@
-Copyright (C) 2020-21 The LineageOS Project
+Copyright (C) The LineageOS Project
 
 # Device Tree for OnePlus Nord N10
 
