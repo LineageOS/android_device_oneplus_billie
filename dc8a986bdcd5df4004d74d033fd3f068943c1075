@@ -16,6 +16,29 @@
       "message": "```suggestion\n```\n#\n# SPDX-FileCopyrightText: The LineageOS Project\n# SPDX-License-Identifier: Apache-2.0\n#\n```\n```",
       "revId": "dc8a986bdcd5df4004d74d033fd3f068943c1075",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "023615dd_e4ee8919",
+        "filename": "init/init.oem.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-09-16T05:35:07Z",
+      "side": 1,
+      "message": "SPDX",
+      "range": {
+        "startLine": 3,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 15
+      },
+      "revId": "dc8a986bdcd5df4004d74d033fd3f068943c1075",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
