@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee674b0a_7de03187",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-09-16T05:31:45Z",
+      "side": 1,
+      "message": "```suggestion\n```\n#\n# SPDX-FileCopyrightText: The LineageOS Project\n# SPDX-License-Identifier: Apache-2.0\n#\n```\n```",
+      "revId": "dc8a986bdcd5df4004d74d033fd3f068943c1075",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
