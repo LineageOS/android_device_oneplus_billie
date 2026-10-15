@@ -1,6 +1,10 @@
 # Camera
 type sysfs_vl53l1, fs_type, sysfs_type;
 
+# Face
+type vendor_face_data_file, file_type, data_file_type;
+type vendor_face_resources_file, vendor_file_type, file_type;
+
 # rootfs
 type op1_file, file_type;
 
