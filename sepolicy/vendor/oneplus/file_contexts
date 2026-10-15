@@ -1,9 +1,15 @@
 # Binaries
 /(vendor|system/vendor)/bin/vl53l1_daemon_main                                    u:object_r:vl53l1_daemon_main_exec:s0
 
+# Data files
+/data/vendor/face(/.*)?                                    u:object_r:vendor_face_data_file:s0
+
 # dev nodes
 /dev/esfp0                                        u:object_r:fingerprintd_device:s0
 /dev/param                                        u:object_r:param_device:s0
+
+# Face unlock
+/(vendor|system/vendor)/etc/faceunlock/resources\.zip                                    u:object_r:vendor_face_resources_file:s0
 
 # Init
 /(odm|vendor/odm)/bin/init\.oem\.sh                                    u:object_r:vendor_qti_init_shell_exec:s0
@@ -11,6 +17,7 @@
 # HALs - OnePlus
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                                      u:object_r:hal_cameraHIDL_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service                               u:object_r:hal_cameraHIDL_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face-service\.oneplus                                u:object_r:hal_face_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.ifaa@2\.0-service                                        u:object_r:hal_ifaa_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.param@1\.0-service                                       u:object_r:hal_param_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.rpmb@1\.0-service                                        u:object_r:hal_rpmb_default_exec:s0
